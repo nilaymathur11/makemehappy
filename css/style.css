@@ -151,7 +151,6 @@ main{
     font-family: 'Merienda', cursive;
     text-transform: uppercase;
     color: #FFFFFF;
-    text-shadow: 0 0 4px white;
   }
   
   #glow {
@@ -163,6 +162,7 @@ main{
   .circle {
     width: 100%;
     height: 30px;
+    filter: blur(2rem);
     animation: pulse_3011 4s infinite;
     z-index: -1;
   }
