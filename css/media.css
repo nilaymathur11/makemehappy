@@ -178,6 +178,12 @@
         display: none;
     }
 
+    .index_main{
+        background-size: cover;
+        background-position: 100% 100%;
+
+    }
+
     nav{
         padding: 50px;
         padding-left: 70px;
