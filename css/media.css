@@ -130,6 +130,7 @@
 
     .audio{
         width: 80%;
+        bottom: 2%;
         left: 10%;
     }
 
@@ -179,9 +180,10 @@
     }
 
     .index_main{
+        background-image: url(../images/pexels-pixabay-158756.jpg);
+        background-size: cover;
         background-attachment: fixed;
-        background-position: 100% 100%;
-
+        background-position: 50% 50%;
     }
 
     nav{
