@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,392 +14,190 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media.css">
-    <title>Make Me Happy</title>
+    <title>Make Me Happy | Home</title>
 </head>
-<body id="home_body">
-    <!-- <h1>You will make this website very soon. JUST BELIEVE IN YOURSELF</h1> -->
-    <main>
-        <section id="main_overlay">
-            <div class="main_overlay_nav">
+
+<body>
+    <main class="index_main">
+        <header>
+            <div class="header_top">
+                <nav>
+                    <div class="navbar">
+                        <ul>
+                            <li>
+                                <a href="#how">how it works ?</a>
+                            </li>
+                            <li>
+                                <a href="#why">why choose us ?</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="logo mob_index_logo">
+                        <a href="index.html"><img src="images/templogo.png" alt=""></a>
+                    </div>
+                    <div class="navbar">
+                        <ul>
+                            <li>
+                                <a href="#about">about us</a>
+                            </li>
+                            <li>
+                                <a href="#contact">contact us</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mobile_nav">
+                        <div class="menu_ico" id="menu_ico" onclick="menu_open()"><i class="fa-solid fa-bars"></i></div>
+                        <div class="menu_ico2" id="menu_ico2" onclick="menu_close()"><i class="fa-solid fa-x"></i></div>
+                        <div class="mob_menu" id="mob_menu">
+                            <ul>
+                                <li onclick="menu_close()">
+                                    <span><i class="fa-solid fa-briefcase menu_list_ico"></i></span>
+                                    <a href="#how">how it works ?</a>
+                                </li>
+                                <li onclick="menu_close()">
+                                    <span><i class="fa-solid fa-face-smile menu_list_ico"></i></span>
+                                    <a href="#why">why choose us ?</a>
+                                </li>
+                                <li onclick="menu_close()">
+                                    <span><i class="fa-solid fa-address-card menu_list_ico"></i></span>
+                                    <a href="#about">about us</a>
+                                </li>
+                                <li onclick="menu_close()">
+                                    <span><i class="fa-solid fa-message menu_list_ico"></i></span>
+                                    <a href="#contact">contact us</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="index_content index_content_1">
+                <div class="index_overlay"></div>
+                <div class="index_content_top" id="how">
+                    <div class="line"></div>
+                    how it works ?
+                    <div class="line line2"></div>
+                </div>
+                <div class="index_content_bottom">
+                    Welcome to our website, where we believe in the power of nature, music, and games to bring happiness
+                    to people's lives. Our platform is designed to provide you with a unique and immersive experience
+                    that will help you relax, unwind, and feel better. <br><br>
+                    To get started, Just click on the button given below and start your journey towards
+                    happiness.<br>
+
+                    <a href="home.html"><button type="button" class="btn btn_index" onclick="slidefunc()">
+                            <strong>make me happy</strong>
+                            <div id="container-stars">
+                                <div id="stars"></div>
+                            </div>
+
+                            <div id="glow">
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                            </div>
+                        </button></a><br>
+                    Here's how our website works: <br>
+                    <ul>
+                        <li>We showcase beautiful images of nature that are carefully selected to help you feel calm and
+                            peaceful. Whether it's a stunning sunset, a lush forest, or a tranquil beach, our images
+                            will transport you to a serene and beautiful world.</li><br>
+                        <li>We also feature a range of soothing music that is designed to help you relax and unwind.
+                            From classical to ambient, our music will help you create the perfect atmosphere for a
+                            peaceful and meditative experience.</li><br>
+                        <li>Our platform also includes a variety of fun and engaging games that are designed to keep you
+                            entertained and happy.</li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div class="index_content index_content_2">
+            <div class="index_overlay"></div>
+            <div class="index_content_top" id="why">
+                <div class="line"></div>
+                why choose us ?
+                <div class="line line2"></div>
+            </div>
+            <div class="index_content_bottom">
+                Here are just a few reasons why you should choose our website: <br>
                 <ul>
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li class="logo">
-                        <img src="images/templogo.png" alt="logo">
-                    </li>
-                    <li>
-                        <a href="index.html#contact">Contact Us</a>
-                    </li>
-                </ul>
+                    <li>We provide a unique and immersive experience that is designed to help you relax and feel better.
+                        Our curated collection of nature images, soothing music, and fun games will transport you to a
+                        peaceful and happy state of mind.</li><br>
+                    <li>Our platform is easy to use and accessible to everyone. Whether you're a nature lover, a music
+                        fan, or a gamer, you'll find something to enjoy on our website.</li><br>
+                    <li>We believe in the power of happiness and positivity to transform people's lives. Our website is
+                        designed to help you cultivate a more positive mindset, reduce stress and anxiety, and improve
+                        your overall well-being.</li><br>
+                    <li>We are dedicated to providing you with the best possible experience. Our team of experts curates
+                        a range of high-quality images, music, and games to ensure that you always have something new
+                        and exciting to explore.</li>
+                </ul><br>
+                At our website, we believe that everyone deserves to be happy. We hope that our platform can help you
+                find the peace, joy, and fulfillment that you deserve. Join us today and experience the transformative
+                power of nature, music, and games!
             </div>
-            <div class="main_overlay_middle">
-                <div class="butterfly">
-                    <img src="images/butterfly-flying-unscreen.gif" alt="butterfly">
-                </div>
-                <div class="main_overlay_slogan">
-                    <span>Life Is Full Of Choices,</span><br>
-                    <span>So Choose Happiness!</span>
-                </div>
-                <div class="mmh_button">
-                    <button type="button" class="btn" onclick="slidefunc()">
-                        <strong>make me happy</strong>
-                        <div id="glow">
-                          <div class="circle"></div>
-                          <div class="circle"></div>
-                        </div>
-                        <script>
-                            function slidefunc()
-                            {
-                                document.getElementById('main_overlay').style.animation = 'main_overlay 1s 0s 1 ease-in forwards'
-                                document.getElementById('slide1').style.opacity = '1'
-                            }
-                        </script>
-                    </button>
-                </div>                  
-                <div class="main_home_page"><a href="index.html">Skip And Go To Home Page?</a></div>
+        </div>
+        <div class="index_content index_content_2">
+            <div class="index_overlay"></div>
+            <div class="index_content_top" id="about">
+                <div class="line"></div>
+                about us
+                <div class="line line2"></div>
             </div>
-            <div class="flower">
-                <img src="images/butterfly-flower-unscreen.gif" alt="flower">
+            <div class="index_content_bottom">
+                We are a team of nature enthusiasts, music lovers, and game developers who believe in the power of
+                happiness and positivity to transform people's lives. Our mission is to provide you with a unique and
+                immersive experience that will help you relax, unwind, and feel better. <br><br>
+
+                Our website is designed to bring together the best of nature, music, and games in one place. We believe
+                that nature has a powerful calming effect on the mind and body, and we showcase a range of stunning
+                images of nature to help you feel more relaxed and at ease. We also believe that music is a universal
+                language that can help you connect with your emotions and uplift your mood. That's why we feature a
+                variety of soothing and inspiring music that is carefully selected to help you relax, focus, and feel
+                better.<br><br>
+
+                And of course, we also believe in the power of games to help you unwind and have fun. Our collection of
+                games includes a range of puzzles, quizzes, and memory games that are designed to keep you entertained
+                and engaged.<br><br>
+
+                At our website, we are committed to providing you with the best possible experience. We believe in the
+                power of happiness to transform lives, and we hope that our platform can help you find the peace, joy,
+                and fulfillment that you deserve. Join us today and experience the beauty of nature, music, and games!
             </div>
-            <div class="main_overlay_bottom">
+        </div>
+        <div class="index_content index_content_2">
+            <div class="index_overlay"></div>
+            <div class="index_content_top" id="contact">
+                <div class="line"></div>
+                contact us
+                <div class="line line2"></div>
+            </div>
+            <div class="index_content_bottom contact">
+                <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+                <div class="elfsight-app-78dd7a6c-a657-4a60-9abe-ad447bfb3d1d"></div>
+            </div>
+        </div>
+        <footer>
                 An Initiative By Make Me Happy Pvt. Ltd.
-            </div>
-        </section>
-        <section class="slides">
-            <section class="slide_lvl1 slide_none" id="slide1">
-                <button class="forward_btn" onclick="slidefunc1()">></button>
-                <script>
-                    function slidefunc1()
-                    {
-                        document.getElementById('slide1').style.animation = 'slides 1s 0s 1 ease-in forwards'
-                        document.getElementById('slide2').style.opacity = '1'
-                    }
-                </script>
-                <div class="logo_slide logo">
-                    <a href="home.html"><img src="images/templogo.png" alt="logo"></a>
-                </div>
-                <div class="lvl1_1">
-                    "Happiness is a journey, not a destination."
-                </div>
-                <div class="lvl1_2">
-                    "the first biggest step is to choose the path towards happiness and you have chosen it"
-                </div>
-                <div class="lvl1_3">
-                    level 1 of happiness completed!
-                </div>
-            </section>
-            <section class="slide_lvl2 slide_none" id="slide2">
-                <button class="forward_btn" onclick="slidefunc2()">></button>
-                <script>
-                    function slidefunc2()
-                    {
-                        document.getElementById('slide2').style.animation = 'slides 1s 0s 1 ease-in forwards'
-                        document.getElementById('slide3').style.opacity = '1'
-                    }
-                </script>
-                <button class="reverse_btn" onclick="document.getElementById('slide1').style.animation = 'slides_rev 1s 0s 1 ease-in-out forwards'"> < </button>
-                        <div class="logo_slide logo">
-                            <a href="home.html"><img src="images/templogo.png" alt="logo"></a>
-                        </div>
-                        <div class="lvl2_1">
-                            you have entered towards journey of happiness and healing
-                        </div>
-                        <div class="lvl2_2">
-                            all you have to do now is sit back and relax
-                        </div>
-                        <div class="lvl2_3">
-                            feel all the pain and anger releasing out of your body. <br>
-                            “Brilliant things happen in calm minds. Be calm. You're brilliant.”
-                        </div>
-                        <div class="lvl2_4">
-                            welcome to level 2 of happiness
-                        </div>
-            </section>
-            <section class="slide_nature nature_1 slide_none" id="slide3">
-                <button class="forward_btn" onclick="slidefunc3()">></button>
-                <script>
-                    function slidefunc3()
-                    {
-                        document.getElementById('slide3').style.animation = 'slides 1s 0s 1 ease-in forwards'
-                        document.getElementById('slide4').style.opacity = '1'
-                    }
-                </script>
-                <button class="reverse_btn"
-                    onclick="document.getElementById('slide2').style.animation = 'slides_rev 1s 0s 1 ease-in-out forwards'">
-                    < </button>
-                        <div class="logo_slide logo">
-                            <a href="home.html"><img src="images/templogo.png" alt="logo"></a>
-                        </div>
-                        <div class="nature_p1 nature_p">
-                            lets take a walk into the immense beautiful nature
-                        </div>
-                        <div class="nature_p2 nature_p">
-                            "In nature, nothing is perfect and everything is perfect. Trees can be contorted, bent in
-                            weird ways, and they're still beautiful."
-                        </div>
-                        <div class="nature_p3 nature_p">
-                            play the audio below and close your eyes to feel wind touching your soul, birds chirping
-                            with their melodious voice
-                        </div>
-                        <div class="audio">
-                            <audio controls>
-                                <source src="audio/birds-in-the-morning-24147.mp3" type="audio/mp3" />
-                                Your browser does not support the audio element.
-                            </audio>
-                        </div>
-            </section>
-            <section class="slide_nature nature_2 slide_none" id="slide4">
-                <button class="forward_btn" onclick="slidefunc4()">></button>
-                <script>
-                    function slidefunc4()
-                    {
-                        document.getElementById('slide4').style.animation = 'slides 1s 0s 1 ease-in forwards'
-                        document.getElementById('slide5').style.opacity = '1'
-                    }
-                </script>
-                <button class="reverse_btn"
-                    onclick="document.getElementById('slide3').style.animation = 'slides_rev 1s 0s 1 ease-in-out forwards'">
-                    < </button>
-                        <div class="logo_slide logo">
-                            <a href="home.html"><img src="images/templogo.png" alt="logo"></a>
-                        </div>
-                        <div class="nature_p1 nature_p p_margin_bottom">
-                            "Wherever you go, go with all your heart."
-                        </div>
-                        <div class="nature_p2 nature_p">
-                            "Live in each season as it passes; breathe the air, drink the drink, taste the fruit, and
-                            resign yourself to the influence of the earth."
-                        </div>
-                        <div class="nature_p3 nature_p p_margin_top">
-                            play the audio below and close your eyes for best experience.
-                        </div>
-                        <div class="audio">
-                            <audio controls>
-                                <source src="audio/forest.mp3" type="audio/mp3" />
-                                Your browser does not support the audio element.
-                            </audio>
-                        </div>
-            </section>
-            <section class="slide_nature nature_3 slide_none" id="slide5">
-                <button class="forward_btn" onclick="slidefunc5()">></button>
-                <script>
-                    function slidefunc5()
-                    {
-                        document.getElementById('slide5').style.animation = 'slides 1s 0s 1 ease-in forwards'
-                        document.getElementById('slide6').style.opacity = '1'
-                    }
-                </script>
-                <button class="reverse_btn"
-                    onclick="document.getElementById('slide4').style.animation = 'slides_rev 1s 0s 1 ease-in-out forwards'">
-                    < </button>
-                        <div class="logo_slide logo">
-                            <a href="home.html"><img src="images/templogo.png" alt="logo"></a>
-                        </div>
-                        <div class="nature_p1 nature_p">
-                            "You are never too old to set another goal or to dream a new dream."
-                        </div>
-                        <div class="nature_p2 nature_p">
-                            "Believe in yourself, take on your challenges, dig deep within yourself to conquer fears.
-                            Never let anyone bring you down. You got to keep going."
-                        </div>
-                        <div class="nature_p3 nature_p">
-                            play the audio below and close your eyes for best experience.
-                        </div>
-                        <div class="audio">
-                            <audio controls>
-                                <source src="audio/bird-singing-and-water-splashing-nature-sounds-7802.mp3"
-                                    type="audio/mp3" />
-                                Your browser does not support the audio element.
-                            </audio>
-                        </div>
-            </section>
-            <section class="slide_nature nature_4 slide_none" id="slide6">
-                <button class="forward_btn" onclick="slidefunc6()">></button>
-                <script>
-                    function slidefunc6()
-                    {
-                        document.getElementById('slide6').style.animation = 'slides 1s 0s 1 ease-in forwards'
-                        document.getElementById('slide7').style.opacity = '1'
-                    }
-                </script>
-                <button class="reverse_btn"
-                    onclick="document.getElementById('slide5').style.animation = 'slides_rev 1s 0s 1 ease-in-out forwards'">
-                    < </button>
-                        <div class="logo_slide logo">
-                            <a href="home.html"><img src="images/templogo.png" alt="logo"></a>
-                        </div>
-                        <div class="nature_p1 nature_p">
-                            "The earth has music for those who listen."
-                        </div>
-                        <div class="nature_p2 nature_p">
-                            "You are braver than you believe, stronger than you seem and smarter than you think. The
-                            harder you work for something, the greater you'll feel when you achieve it."
-                        </div>
-                        <div class="nature_p3 nature_p">
-                            play the audio below and close your eyes for best experience.
-                        </div>
-                        <div class="audio">
-                            <audio controls>
-                                <source src="audio/sandy-beach-calm-waves-water-nature-sounds-8052.mp3"
-                                    type="audio/mp3" />
-                                Your browser does not support the audio element.
-                            </audio>
-                        </div>
-            </section>
-            <section class="slide_lvl2_end slide_none" id="slide7">
-                <button class="forward_btn" onclick="slidefunc7()">></button>
-                <script>
-                    function slidefunc7()
-                    {
-                        document.getElementById('slide7').style.animation = 'slides 1s 0s 1 ease-in forwards'
-                        document.getElementById('slide8').style.opacity = '1'
-                    }
-                </script>
-                <button class="reverse_btn"
-                    onclick="document.getElementById('slide6').style.animation = 'slides_rev 1s 0s 1 ease-in-out forwards'">
-                    < </button>
-                        <div class="logo_slide logo">
-                            <a href="home.html"><img src="images/templogo.png" alt="logo"></a>
-                        </div>
-                        <div class="lvl2_1 p_margin_bottom">
-                            'Believe in yourself, take on your challenges, dig deep within yourself to conquer fears.'
-                        </div>
-                        <div class="lvl2_2">
-                            Studies have shown that some video games can boost mood and also help relieve stress. so why
-                            not test this theory!
-                        </div>
-                        <div class="lvl2_3 p_margin_top">
-                            welcome to level 3 of happiness
-                        </div>
-            </section>
-            <section class="slide_lvl3 slide_none" id="slide8">
-                <button class="forward_btn" onclick="slidefunc8()">></button>
-                <script>
-                    function slidefunc8()
-                    {
-                        document.getElementById('slide8').style.animation = 'slides 1s 0s 1 ease-in forwards'
-                        document.getElementById('slide9').style.opacity = '1'
-                    }
-                </script>
-                <button class="reverse_btn"
-                    onclick="document.getElementById('slide7').style.animation = 'slides_rev 1s 0s 1 ease-in-out forwards'">
-                    < </button>
-                        <div class="logo_slide logo">
-                            <a href="home.html"><img src="images/templogo.png" alt="logo"></a>
-                        </div>
-                        <div class="lvl3_1">
-                            lets play some of the best retro games ever made!
-                        </div>
-                        <div class="lvl3_2 lvl3_2_1">
-                            super mario bros.
-                        </div>
-                        <div class="lvl3_3 lvl3_3_1 lvl3_3_pc">
-                            <iframe src='https://www.miniplay.com/embed/super-mario-bros' frameborder='0' allowfullscreen></iframe>
-                            <span><sup>*</sup>(For Best Experience Use FullScreen Mode And Set Button Controls According
-                                To Your Preference.) </span>
-                        </div>
-                        <div class="lvl3_3 lvl3_3_1 lvl3_3_mob">
-                            <iframe src='https://www.miniplay.com/game/super-mario-bros/play' frameborder='0' allowfullscreen></iframe>
-                            <span><sup>*</sup>(For Best Experience Use FullScreen Mode And Set Button Controls According
-                                To Your Preference.) </span>
-                        </div>
-            </section>
-            <section class="slide_lvl3 slide_none" id="slide9">
-                <button class="forward_btn" onclick="slidefunc9()">></button>
-                <script>
-                    function slidefunc9()
-                    {
-                        document.getElementById('slide9').style.animation = 'slides 1s 0s 1 ease-in forwards'
-                        document.getElementById('slide10').style.opacity = '1'
-                    }
-                </script>
-                <button class="reverse_btn"
-                    onclick="document.getElementById('slide8').style.animation = 'slides_rev 1s 0s 1 ease-in-out forwards'">
-                    < </button>
-                        <div class="logo_slide logo">
-                            <a href="home.html"><img src="images/templogo.png" alt="logo"></a>
-                        </div>
-                        <div class="lvl3_2 lvl3_2_m">
-                            Super-BomberMan
-                        </div>
-                        <div class="lvl3_3 lvl3_3_1 lvl3_3_pc">
-                            <iframe src='https://www.miniplay.com/embed/super-bomberman' frameborder='0' allowfullscreen></iframe>
-                            <span><sup>*</sup>(For Best Experience Use FullScreen Mode And Set Button Controls According
-                                To Your Preference.) </span>
-                        </div>
-                        <div class="lvl3_3 lvl3_3_1 lvl3_3_mob">
-                            <iframe src='https://www.miniplay.com/game/super-bomberman/play' frameborder='0' allowfullscreen></iframe>
-                            <span><sup>*</sup>(For Best Experience Use FullScreen Mode And Set Button Controls According
-                                To Your Preference.) </span>
-                        </div>
-            </section>
-            <section class="slide_lvl3 slide_none" id="slide10">
-                <button class="forward_btn" onclick="slidefunc10()">></button>
-                <script>
-                    function slidefunc10()
-                    {
-                        document.getElementById('slide10').style.animation = 'slides 1s 0s 1 ease-in forwards'
-                        document.getElementById('slide11').style.opacity = '1'
-                    }
-                </script>
-                <button class="reverse_btn" onclick="document.getElementById('slide9').style.animation = 'slides_rev 1s 0s 1 ease-in-out forwards'"> < </button>
-                        <div class="logo_slide logo">
-                            <a href="home.html"><img src="images/templogo.png" alt="logo"></a>
-                        </div>
-                        <div class="lvl3_2 lvl3_2_m">
-                            Snake-Bit 3310
-                        </div>
-                        <div class="lvl3_3 lvl3_3_1 lvl3_3_pc">
-                            <iframe src='https://www.miniplay.com/embed/snake-bit-3310' frameborder='0' allowfullscreen></iframe>
-                            <span><sup>*</sup>(For Best Experience Use FullScreen Mode And Set Button Controls According
-                                To Your Preference.) </span>
-                        </div>
-                        <div class="lvl3_3 lvl3_3_1 lvl3_3_mob">
-                            <iframe src='https://www.miniplay.com/game/snake-bit-3310/play' frameborder='0' allowfullscreen></iframe>
-                            <span><sup>*</sup>(For Best Experience Use FullScreen Mode And Set Button Controls According
-                                To Your Preference.) </span>
-                        </div>
-            </section>
-            <section class="slide_lvl3 slide_none" id="slide11">
-                <button class="forward_btn" onclick="slidefunc11()">></button>
-                <script>
-                    function slidefunc11()
-                    {
-                        document.getElementById('slide11').style.animation = 'slides 1s 0s 1 ease-in forwards'
-                        document.getElementById('slide12').style.opacity = '1'
-                    }
-                </script>
-                <button class="reverse_btn" onclick="document.getElementById('slide10').style.animation = 'slides_rev 1s 0s 1 ease-in-out forwards'"> < </button>
-                <div class="logo_slide logo">
-                    <a href="home.html"><img src="images/templogo.png" alt="logo"></a>
-                </div>
-                <div class="lvl3_2 lvl3_2_m">
-                    Space - Pin Ball
-                </div>
-                <div class="lvl3_3 lvl3_3_1 lvl3_3_pc">
-                    <iframe src='https://www.miniplay.com/embed/space-adventure-pinball' frameborder='0' allowfullscreen></iframe>
-                    <span><sup>*</sup>(For Best Experience Use FullScreen Mode And Set Button Controls According
-                        To Your Preference.) </span>
-                </div>
-                <div class="lvl3_3 lvl3_3_1 lvl3_3_mob">
-                    <iframe src='https://www.miniplay.com/game/space-adventure-pinball/play' frameborder='0' allowfullscreen></iframe>
-                    <span><sup>*</sup>(For Best Experience Use FullScreen Mode And Set Button Controls According
-                        To Your Preference.) </span>
-                </div>
-            </section>
-            <section class="slide_lvl3 slide_lvl3_end slide_none" id="slide12">
-                <button class="reverse_btn" onclick="document.getElementById('slide11').style.animation = 'slides_rev 1s 0s 1 ease-in-out forwards'"> < </button>
-                <div class="logo_slide logo">
-                    <a href="home.html"><img src="images/templogo.png" alt="logo"></a>
-                </div>
-                <div class="lvl2_3 lvl3_4">
-                       Level 3 of happiness completed! <br>
-                        we believe that happiness is a state of mind that can be achieved by anyone. By providing a serene and tranquil environment with images of nature, calming music, and fun games, we aim to help our viewers find peace and happiness. We are proud to say that our viewers have reported feeling more relaxed and content after spending time on our website. Our goal is to help people heal and find joy in their lives, and we are honored to be a part of that journey. <br> Thank you for trusting us to provide you with the tools to achieve your happiness.
-                </div>
-            </section>
-        </section>
+        </footer>
     </main>
 </body>
+<script>
+    
+    var line = document.getElementById('menu_ico');
+    var cross = document.getElementById('menu_ico2');
+    var menu = document.getElementById('mob_menu');
 
+    function menu_open(){
+        line.style.display = 'none';
+        cross.style.display = 'block';
+        menu.style.left = '0%';
+    }
+    function menu_close(){
+        line.style.display = 'block';
+        cross.style.display = 'none';
+        menu.style.left = '100%';
+    }
+
+</script>
 </html>
