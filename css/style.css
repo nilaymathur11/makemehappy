@@ -575,10 +575,9 @@ audio{
 /* Start of Index Page CSS */
 
 .index_main{
-    background-image: url(../images/pexels-moose-photos-1037992.jpg);
+    background-image: url(../images/pexels-pixabay-158756.jpg);
     background-size: cover;
     background-attachment: fixed;
-    background-position: 100% 100%;
 }
 
 html{
@@ -667,7 +666,7 @@ nav{
     font-size: 22px;
     text-shadow: 1px 1px 1px white;
     color: rgb(0, 0, 0);
-    background-color: rgba(225, 222, 222, 0.5);
+    background-color: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
 }
 
