@@ -180,15 +180,12 @@
     }
 
     .index_main{
-        background-image: url(../images/pexels-pixabay-158756.jpg);
-        background-size: cover;
-        background-attachment: fixed;
-        background-position: 50% 50%;
+        background: none;
+        background-image: linear-gradient(85deg,rgb(184, 221, 239),white);
     }
 
     nav{
-        padding: 50px;
-        padding-left: 70px;
+        padding: 30px 40px;
         box-sizing: border-box;
         display: flex;
         align-items: center;
@@ -212,17 +209,17 @@
         border-top: 2px solid black;
     }
 
-    .fa-bars{
+    .menu_ico, .menu_ico2{
         color: rgb(158,128,26);
         font-size: 30px;
         background-color: white;
         border: 2px solid black;
         border-radius: 8px;
-        padding: 10px;
+        padding: 8px 18px;
     }
 
-    .menu_ico:hover~.mob_menu{
-        left: 0%;
+    .menu_ico2{
+        display: none;
     }
 
     .mob_menu ul{
