@@ -46,8 +46,9 @@
                         </ul>
                     </div>
                     <div class="mobile_nav">
-                        <div class="menu_ico"><i class="fa-solid fa-bars"></i></div>
-                        <div class="mob_menu">
+                        <div class="menu_ico" id="menu_ico" onclick="menu_open()"><i class="fa-solid fa-bars"></i></div>
+                        <div class="menu_ico2" id="menu_ico2" onclick="menu_close()"><i class="fa-solid fa-x"></i></div>
+                        <div class="mob_menu" id="mob_menu">
                             <ul>
                                 <li>
                                     <span><i class="fa-solid fa-briefcase menu_list_ico"></i></span>
@@ -181,5 +182,20 @@
         </footer>
     </main>
 </body>
+<script>
+    var line = document.getElementById('menu_ico');
+    var cross = document.getElementById('menu_ico2');
+    var menu = document.getElementById('mob_menu');
+    function menu_open(){
+        line.style.display = 'none';
+        cross.style.display = 'block';
+        menu.style.left = '0%';
+    }
+    function menu_close(){
+        line.style.display = 'block';
+        cross.style.display = 'none';
+        menu.style.left = '100%';
+    }
 
+</script>
 </html>
