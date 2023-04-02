@@ -50,19 +50,19 @@
                         <div class="menu_ico2" id="menu_ico2" onclick="menu_close()"><i class="fa-solid fa-x"></i></div>
                         <div class="mob_menu" id="mob_menu">
                             <ul>
-                                <li>
+                                <li onclick="menu_close()">
                                     <span><i class="fa-solid fa-briefcase menu_list_ico"></i></span>
                                     <a href="#how">how it works ?</a>
                                 </li>
-                                <li>
+                                <li onclick="menu_close()">
                                     <span><i class="fa-solid fa-face-smile menu_list_ico"></i></span>
                                     <a href="#why">why choose us ?</a>
                                 </li>
-                                <li>
+                                <li onclick="menu_close()">
                                     <span><i class="fa-solid fa-address-card menu_list_ico"></i></span>
                                     <a href="#about">about us</a>
                                 </li>
-                                <li>
+                                <li onclick="menu_close()">
                                     <span><i class="fa-solid fa-message menu_list_ico"></i></span>
                                     <a href="#contact">contact us</a>
                                 </li>
@@ -183,9 +183,11 @@
     </main>
 </body>
 <script>
+    
     var line = document.getElementById('menu_ico');
     var cross = document.getElementById('menu_ico2');
     var menu = document.getElementById('mob_menu');
+
     function menu_open(){
         line.style.display = 'none';
         cross.style.display = 'block';
