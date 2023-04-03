@@ -179,16 +179,15 @@
     }
 
     .index_main{
-        background: none;
-        background-image: linear-gradient(85deg,rgb(184, 221, 239),white);
+       background-position: 50% 50%;
     }
 
     nav{
-        padding: 30px 40px;
+        padding: 30px;
         box-sizing: border-box;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content:flex-end;
     }
 
     .mobile_nav{
@@ -200,21 +199,19 @@
         width: 100%;
         height: 71.8vh;
         text-align: center;
-        background-color: white;
         top: 28%;
         left: 100%;
         transition: 0.5s linear;
         z-index: 999;
         border-top: 2px solid black;
+        background-color: white;
     }
 
     .menu_ico, .menu_ico2{
         color: rgb(158,128,26);
-        font-size: 25px;
-        background-color: white;
-        border: 2px solid black;
-        border-radius: 8px;
-        padding: 6px 12px;
+        width: 35px;
+        font-size: 30px;
+        margin-left: 60px;
     }
 
     .menu_ico2{
@@ -260,6 +257,14 @@
         margin-top: 25px;
         line-height: 40px;
         width: 90%;
+    }
+
+    .back_top{
+        top: 88%;
+        left: 82%;
+        padding: 5px 14px;
+        font-size: 30px;
+        z-index: 99999;
     }
 
     footer{

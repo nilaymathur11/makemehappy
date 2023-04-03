@@ -573,9 +573,9 @@ audio{
 /* Start of Index Page CSS */
 
 .index_main{
-    background-image: url(../images/pexels-pixabay-158756.jpg);
-    background-size: cover;
-    background-attachment: fixed;
+    background-image: url('../images/pexels-karolina-grabowska-5725894.jpg');
+    background-size: contain;
+    background-position: 100% 100%;
 }
 
 html{
@@ -678,6 +678,17 @@ nav{
 
 .btn_index{
     width: 35%;
+}
+
+.back_top{
+    position: fixed;
+    top: 91%;
+    left: 89%;
+    color: white;
+    background-color: #9e801a;
+    padding: 8px 18px;
+    font-size: 35px;
+    cursor: pointer;
 }
 
 footer{
