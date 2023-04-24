@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Looking for a website that can make you happy? Look no further! Our website is dedicated to providing you with the best images of nature, soothing music, and fun games to help you relax.">
+    <meta name="description"
+        content="Looking for a website that can make you happy? Look no further! Our website is dedicated to providing you with the best images of nature, soothing music, and fun games to help you relax.">
     <meta name="keywords" content="MakeMeHappy,Happiness,Nature,Music,Games,Relaxation">
     <link rel="shortcut icon" href="images/favico.png" type="image/x-icon">
     <link rel="canonical" href="">
@@ -85,12 +86,11 @@
                     To get started, Just click on the button given below and start your journey towards
                     happiness.<br>
 
-                    <a href="index.html"><button type="button" class="btn btn_index" onclick="slidefunc()">
+                    <a href="index.html"><button type="button" class="btn btn_index">
                             <strong>make me happy</strong>
                             <div id="container-stars">
                                 <div id="stars"></div>
                             </div>
-
                             <div id="glow">
                                 <div class="circle"></div>
                                 <div class="circle"></div>
@@ -183,26 +183,12 @@
             </a>
         </div>
         <footer>
-                An Initiative By Make Me Happy Pvt. Ltd.
+            An Initiative By Make Me Happy Pvt. Ltd.
         </footer>
     </main>
 </body>
-<script>
-    
-    var line = document.getElementById('menu_ico');
-    var cross = document.getElementById('menu_ico2');
-    var menu = document.getElementById('mob_menu');
 
-    function menu_open(){
-        line.style.display = 'none';
-        cross.style.display = 'block';
-        menu.style.left = '0%';
-    }
-    function menu_close(){
-        line.style.display = 'block';
-        cross.style.display = 'none';
-        menu.style.left = '100%';
-    }
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="js/script.js"></script>
 
-</script>
 </html>
