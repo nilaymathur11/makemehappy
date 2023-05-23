@@ -1,4 +1,4 @@
-@media only screen and (max-width:768px){
+@media only screen and (max-width:767px){
 
     #main_overlay{
         background-position: 48% 50%;
@@ -8,18 +8,17 @@
         justify-content: center;
     }
 
-    .logo{
-        height: 100px;
-        width: 130px;
-    }
-
     .main_overlay_nav ul li{
-        font-size: 16px;
-        margin: 0px 10px;
+        font-size: 18px;
+        margin: 0px;
     }
 
     .main_overlay_nav ul li:first-child{
         padding: 10px 15px;
+    }
+
+    .main_overlay_nav ul li:nth-child(2){
+        margin: 0px 20px;
     }
 
     .main_overlay_nav ul li:last-child{
@@ -43,7 +42,7 @@
     }
 
     .btn strong{
-        font-size: 30px;
+        font-size: 25px;
     }
 
     .main_overlay_bottom{
@@ -60,95 +59,107 @@
         display: none;
     }
 
-    .logo_slide{
-        height: 100px;
-    }
-
-    .logo_slide img{
-        height: 100px;
-        width: 150px;
-    }
-
-    .lvl1_1, .lvl2_1, .lvl3_1{
-        width: 90%;
-        font-size: 18px;
-        line-height: 30px;
-        margin: 20px auto;
-        margin-top: 30px;
-        padding: 10px 20px;
-    }
-
-    .lvl1_1{
-        margin-top: 80px;
-    }
-
-    .lvl1_2, .lvl2_2, .lvl2_4, .lvl3_2{
-        width: 90%;
-        margin: 20px auto;
-        line-height: 30px;
-        font-size: 18px;
-        padding: 10px 20px;
-    }
-
-    .lvl1_3, .lvl2_3, .lvl3_3{
-        width: 90%;
-        font-size: 20px;
-        margin: 20px auto;
-        line-height: 30px;
-        padding: 10px 20px;
-    }
-
-    .nature_p{
-        width: 90%;
-        margin: 10px auto;
-        line-height: 40px;
-        font-size: 17px;
-        padding: 0px 20px;
-    }
-
-    .nature_p1{
-        margin-top: 20px;
-    }
-
-    .p_margin_bottom{
-        margin-bottom: 50px;
-    }
-
-    .p_margin_top{
-        margin-top: 50px;
+    .logo{
+        height: 90px;
+        width: 90px;
     }
 
     .forward_btn, .reverse_btn{
         font-size: 45px;
         width: 50px;
         height: 60px;
-        background-color: rgba(158,128,26,0.7);
+        opacity: 0.9;
+        background-image: linear-gradient(90deg, #817d7d, #4d8340);
     }
 
+    .lvl1_1, .lvl2_1, .lvl3_1,.lvl1_2, .lvl2_2, .lvl2_4, .lvl3_2,.lvl1_3, .lvl2_3, .lvl3_3, .lvl3_4{
+        padding: 10px;
+        font-size: 16px;
+        left: 0%;
+        width: 100%;
+    }
+
+    .lvl1_2{
+        top: 41%;
+    }
+
+    .lvl2_2{
+        top: 38%;
+    }
+    
+    .lvl2_3{
+        top: 56%;
+        line-height: 40px;
+    }
+    
+    .lvl2_4{
+        top: 87%;
+    }
+
+    .lvl1_2_new{
+        top: 48%;
+        line-height: unset;
+    }
+
+    .nature_p{
+        font-size: 16px;
+        left: 0%;
+        width: 100%;
+        line-height: 30px;
+    }
+
+    .nature_p1{
+        top: 20%;
+    }
+    
+    .nature_p2{
+        top: 38%;
+    }
+    
+    .nature_p3{
+        top: 65%;
+    }
+
+    .nature_p3_1{
+        top: 70%;
+    }
+    
     .audio{
         width: 80%;
-        bottom: 2%;
         left: 10%;
+        top: 90%;
     }
 
     .slide_lvl3{
         background-position:10% 60%;
     }
 
-    .lvl3_1{
-        margin-bottom: 5px;
-    }
-
-    .lvl3_2_1{
-        margin: 0px auto;
-    }
-
-    .lvl3_3_1{
-        margin: 0px auto;
+    .lvl3_2{
+        top: 37%;
     }
 
     .lvl3_3{
-        height: 320px;
+        height: 300px;
+        top: 46%;
+    }
+
+    .lvl3_2_new{
+        top: 20%;
+    }
+    
+    .lvl3_3_new{
+        top: 35%;
+    }
+
+    .lvl3_4{
+        font-size: 10px;
+        line-height: 16px;
+        top: 92%;
+    }
+
+    .last_slide{
+        top: 20%;
+        line-height: 42px;
     }
 
     .lvl3_3_mob{
@@ -159,27 +170,14 @@
         display: none;
     }
 
-    .lvl3_3 span{
-        font-size: 10px;
-        line-height: 12px;
-    }
-
-    .lvl3_2_m{
-        margin-top: 50px;
-    }
-
-    .lvl3_4{
-        margin-top: 40px;
-        font-size: 14px;
-        line-height: 35px;
-    }
-
     .navbar{
         display: none;
     }
 
-    .index_main{
-       background-position: 50% 50%;
+    .home_main{
+       background-size: cover;
+       background-repeat: no-repeat;
+       background-position: center center;
     }
 
     nav{
@@ -199,19 +197,19 @@
         width: 100%;
         height: 71.8vh;
         text-align: center;
-        top: 28%;
+        top: 29%;
         left: 100%;
-        transition: 0.5s linear;
+        transition: 0.3s linear;
         z-index: 999;
         border-top: 2px solid black;
-        background-color: white;
+        background-image: linear-gradient(90deg, #949191, #374e31);
     }
 
     .menu_ico, .menu_ico2{
-        color: rgb(158,128,26);
+        color: rgb(26, 69, 33);
         width: 35px;
         font-size: 30px;
-        margin-left: 60px;
+        margin-left: 100px;
     }
 
     .menu_ico2{
@@ -226,31 +224,36 @@
         line-height: 90px;
         font-size: 21px;
         text-transform: capitalize;
+        color: white;
     }
 
     .menu_list_ico{
-        color: rgb(158,128,26);
+        color: rgb(26, 69, 33);
     }
 
     .line{
         display: none;
     }
 
-    .btn_index{
+    .btn_home{
         width: 100%;
     }
 
-    .index_content{
+    .btn_home strong{
+        font-size: 25px;
+    }
+
+    .home_content{
         padding: 0px;
     }
 
-    .index_content_top{
+    .home_content_top{
         font-size: 30px;
         width: 85%;
         margin-top: 50px;
     }
 
-    .index_content_bottom{
+    .home_content_bottom{
         padding-bottom: 0px;
         font-size: 18px;
         margin: auto;
@@ -271,9 +274,9 @@
         font-size: 16px;
     }
 
-    .mob_index_logo{
-        height: 120px;
-        width: 150px;
+    .mob_home_logo{
+        height: 110px;
+        width: 110px;
     }
 
 }

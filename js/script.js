@@ -1,6 +1,13 @@
 
 // Index Page Script
 
+var vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+window.addEventListener('resize', () => {
+    var vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+})
+
 $('#btn1').click(
     function () {
         $('#main_overlay').css('animation', 'main_overlay 1s 0s 1 ease-in forwards');
@@ -158,16 +165,19 @@ $('#btn23').click(
 var line = document.getElementById('menu_ico');
 var cross = document.getElementById('menu_ico2');
 var menu = document.getElementById('mob_menu');
+var body = document.querySelector('body');
 
 function menu_open() {
     line.style.display = 'none';
     cross.style.display = 'block';
     menu.style.left = '0%';
+    body.style.overflow = 'hidden';
 }
 function menu_close() {
     line.style.display = 'block';
     cross.style.display = 'none';
     menu.style.left = '100%';
+    body.style.overflow = 'unset';
 }
 
 // End of Home Page Script

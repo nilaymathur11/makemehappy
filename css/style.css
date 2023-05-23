@@ -23,7 +23,8 @@ main{
 
 #main_overlay{
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    height: calc(var(--vh,1vh)*100);
     background-image: url(../images/wp9361195-cartoon-nature-4k-wallpapers.jpg);
     background-size: cover;
     position: absolute;
@@ -57,25 +58,27 @@ main{
 }
 
 .logo{
-    height: 150px;
-    width: 200px;
+    border-radius: 50%;
+    height: 130px;
+    width: 130px;
 }
 
 .logo img{
-    width: 100%;
     height: 100%;
+    width: 100%;
+    border-radius: 50%;
 }
 
 .logo_slide{
     text-align: center;
     margin: auto;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .main_overlay_nav ul{
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     padding-top: 20px;
 }
 
@@ -125,7 +128,7 @@ main{
 
 /* CSS of MMH Button */
 
-.btn {
+.click_mmh {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -137,14 +140,14 @@ main{
     border-radius: 10px;
     transition: 0.5s;
     animation: gradient_301 5s ease infinite;
-    border: double 4px transparent;
+    border: double 4px transparent !important;
     background-image: linear-gradient(#212121, #212121),  linear-gradient(137.48deg, #ffdb3b 10%,#FE53BB 45%, #8F51EA 67%, #0044ff 87%);
     background-origin: border-box;
     background-clip: content-box, border-box;
     cursor: pointer;
   }
   
-  .btn strong {
+  .click_mmh strong {
     z-index: 2;
     font-size: 35px;
     font-weight: 800;
@@ -175,7 +178,7 @@ main{
     background: rgba(142, 81, 234, 0.704);
   }
   
-  .btn:hover {
+  .click_mmh:hover {
     transform: scale(1.1)
   }
   
@@ -300,14 +303,14 @@ main{
     top: 45%;
     right: 0%;
     border: 1px solid black;
-    /* background-color: rgba(158,128,26,0.8); */
-    background-color: rgb(20, 20, 20);
+    background-image: linear-gradient(90deg, #272727, #273f21);
     color: white;
     height: 80px;
     width: 80px;
     font-size: 50px;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
+    z-index: 100000;
 }
 
 .reverse_btn{
@@ -320,17 +323,20 @@ main{
 
 .slide_lvl1, .slide_lvl2, .slide_lvl3, .slide_nature, .slide_lvl2_end, .slide_lvl3{
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    height: calc(var(--vh,1vh)*100);
     position: absolute;
     left: 0%;
     padding-top: 0.1px;
     flex-wrap: wrap;
     text-transform: capitalize;
-    font-size: 30px;
+    font-size: 25px;
     line-height: 40px;
     font-weight: bold;
-    background-image: url(../images/wp6215652-aesthetic-anime-scenery-wallpapers.jpg);
+    background-image: url(../images/stephen-leonardi-gyIRjKPXupE-unsplash.jpg);
     background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
     color: rgb(30, 29, 29);
 }
 
@@ -338,124 +344,96 @@ main{
     z-index: 998;
 }
 
-.lvl1_1, .lvl2_1, .lvl3_1{
-    width: 60%;
-    color: #9e801a;
+.lvl1_1, .lvl2_1, .lvl3_1,.lvl1_2, .lvl2_2, .lvl2_4, .lvl3_2,.lvl1_3, .lvl2_3, .lvl3_3{
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
-    margin: 100px auto;
-    margin-top: 100px;
-    padding: 20px;
+    background-image: linear-gradient(90deg, #272727, #273f21);
+    color: white;
+    opacity: 0.9;
+    border-radius: 20px;
+    padding: 30px;
+    line-height: 40px;
     box-sizing: border-box;
+    position: absolute;
+    left: 15%;
+    width: 70%;
 }
 
-.lvl1_1{
-    margin-top: 150px;
-}
-
-.lvl1_2, .lvl2_2, .lvl2_4, .lvl3_2{
-    width: 60%;
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
-    margin: 100px auto;
-    padding: 20px;
-    box-sizing: border-box;
-    color: #9e801a;
+.lvl1_1,.lvl2_1,.lvl3_1{
+    top: 20%;
 }
 
 .lvl1_2{
-    line-height: 60px;
+    top: 45%;
 }
 
-.lvl1_3, .lvl2_3, .lvl3_3{
-    width: 60%;
-    font-size: 30px;
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.8);
-    color: #9e801a;
-    border-radius: 10px;
+.lvl1_3{
+    top: 75%;
+}
+
+.lvl2_2{
+    top: 35%;
+}
+
+.lvl2_3{
+    top: 50%;
     line-height: 50px;
-    margin: 0px auto;
-    margin-top: 100px;
-    padding: 20px;
-    box-sizing: border-box;
+}
+
+.lvl2_4{
+    top: 70%;
 }
 
 .slide_lvl2{
     color: #000;
-    font-size: 30px;
     text-transform: capitalize;
-    background-image: url(../images/wp5489097-4k-colorful-desktop-wallpapers.jpg);
+    background-image: url(../images/redcharlie-redcharlie1-k2zWqv_yfNM-unsplash.jpg);
     z-index: 997;
 }
 
-.lvl2_1{
-    margin-top: 100px;
-    width: 60%;
-    padding: 20px;
-    color: #9e801a;
-    box-sizing: border-box;
-}
-
-.lvl2_2, .lvl2_4{
-    width: 60%;
-    padding: 20px;
-    color: #9e801a;
-    box-sizing: border-box;
-}
-
-.lvl2_3{
-    width: 60%;
-    padding: 20px;
-    box-sizing: border-box;
-    color: #9e801a;
-}
-
 .slide_nature{
-    font-size: 30px;
+    font-size: 25px;
     text-transform: capitalize;
     background-image: url(../images/pexels-andré-cook-131723.jpg);
     z-index: 995;
 }
 
-.audio{
+.nature_p{
+    text-align: center;
+    line-height: 60px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-image: linear-gradient(90deg, #272727, #273f21);
+    color: white;
+    opacity: 0.9;
+    border-radius: 20px;
     position: absolute;
-    bottom: 4%;
-    left: 30%;
-    width: 40%;
-    margin: auto;
-    margin-top: 20px;
+    left: 15%;
+    width: 70%;
+}
+
+.nature_p1{
+    top: 20%;
+}
+
+.nature_p2{
+    top: 38%;
+}
+
+.nature_p3{
+    top: 60%;
+}
+
+.audio{
+    width: 60%;
+    position: absolute;
+    left: 20%;
+    top: 82%;
 }
 
 audio{
     width: 100%;
     background-color: #9e801a;
     border-radius: 10px;
-}
-
-.nature_p{
-    width: 60%;
-    text-align: center;
-    font-size: 30px;
-    line-height: 60px;
-    padding: 20px;
-    box-sizing: border-box;
-    background-color: rgba(255, 255, 255, 0.8);
-    color: #9e801a;
-    border-radius: 10px;
-    margin: 0px auto;
-    margin-top: 100px;
-}
-
-.nature_p2{
-    margin-top: 80px;
-}
-
-.nature_p3{
-    margin-top: 80px;
-    color: black;
 }
 
 .nature_2{
@@ -477,10 +455,17 @@ audio{
 }
 
 .slide_lvl2_end{
-    font-size: 30px;
     text-transform: capitalize;
-    background-image: url(../images/wp4511654-scenery-night-digital-art-wallpapers.jpg);
+    background-image: url(../images/florian-van-duyn-BR1WANLLpDU-unsplash.jpg);
     z-index: 991;
+}
+
+.lvl1_2_new{
+    line-height: 50px;
+}
+
+.lvl1_3_new{
+    top: 78%;
 }
 
 .slide_lvl3{
@@ -491,45 +476,70 @@ audio{
 }
 
 .lvl3_1{
+    width: 70%;
     background-color: rgba(0,0,0,0.9);
     color: white;
-    margin-bottom: 15px;
+    opacity: 1;
+    position: absolute;
+    top: 20%;
+    left: 15%;
 }
 
 .lvl3_2{
-    width: 30%;
+    width: 70%;
     font-size: 40px;
     background-color: rgba(0,0,0,0.9);
     text-decoration: underline;
     font-weight: bold;
-    margin-top: 15px;
-    margin-bottom: 0px;
+    opacity: 1;
+    position: absolute;
+    top: 32%;
+    left: 15%;
 }
 
 .lvl3_3{
-    margin-top: 0px;
-    background-color: unset;
-    width: 60%;
+    background-image: unset;
+    width: 50%;
     height: 550px;
+    opacity: 1;
+    position: absolute;
+    top: 42%;
+    left: 25%;
+    border-radius: 10px;
+}
+
+.lvl3_4{
+    text-align: center;
+    width: 70%;
+    font-size: 14px;
+    color: red;
+    background-color: rgba(0,0,0,0.9);
+    position: absolute;
+    top: 95%;
+    left: 15%;
+}
+
+.lvl3_2_new{
+    top: 20%;
+}
+
+.lvl3_3_new{
+    top: 35%;
 }
 
 .lvl3_3 iframe{
     height: 100%;
     width: 100%;
+    border-radius: 10px;
 }
 
 .lvl3_3_mob{
     display: none;
 }
 
-.lvl3_3 span{
-    font-size: 14px;
-    color: red;
-    background-color: rgba(0,0,0,0.9);
-}
-
-.lvl3_2_m{
-    margin-top: 150px;
+.last_slide{
+    top: 20%;
+    line-height: 80px;
 }
 
 #slide9{
@@ -553,18 +563,13 @@ audio{
     background-position: 10% 10%;
 }
 
-.lvl3_4{
-    background-color: rgba(255, 255, 255, 0.5);
-    color: #000;
-    line-height: 60px;
-}
-
 /* Start of Index Page CSS */
 
-.index_main{
-    background-image: url('../images/pexels-karolina-grabowska-5725894.jpg');
+.home_main{
+    background-image: url('../images/kira-laktionov-WK0_WJZ_umM-unsplash.jpg');
     background-size: contain;
-    background-position: 100% 100%;
+    background-attachment: fixed;
+    background-position: 100px 0px;
 }
 
 html{
@@ -587,14 +592,14 @@ nav{
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
 }
 
 .navbar ul{
     display: flex;
     margin: 0px 50px;
-    border-top: 1px solid rgb(171, 91, 198);
-    border-bottom: 1px solid rgb(171, 91, 198);
+    border-top: 1px solid rgb(26, 69, 33);
+    border-bottom: 1px solid rgb(26, 69, 33);
     list-style: unset;
 }
 
@@ -608,13 +613,13 @@ nav{
     text-decoration: underline;
 }
 
-.index_content{
+.home_content{
     width: 100%;
     padding: 0% 12%;
     box-sizing: border-box;
 }
 
-.index_content_top{
+.home_content_top{
     text-transform: capitalize;
     width: 30%;
     text-align: center;
@@ -641,7 +646,7 @@ nav{
     left: 100%;
 }
 
-.index_content_bottom{
+.home_content_bottom{
     width: 100%;
     padding: 25px;
     padding-bottom: 50px;
@@ -661,11 +666,11 @@ nav{
     background: none;
 }
 
-.index_content_bottom ul{
+.home_content_bottom ul{
     list-style: unset;
 }
 
-.btn_index{
+.btn_home{
     width: 35%;
 }
 
@@ -674,7 +679,7 @@ nav{
     top: 91%;
     left: 89%;
     color: white;
-    background-color: #9e801a;
+    background-image: linear-gradient(90deg, #272727, #273f21);
     padding: 8px 18px;
     font-size: 35px;
     cursor: pointer;
@@ -686,7 +691,7 @@ footer{
     line-height: 100px;
     font-size: 25px;
     color: white;
-    background-color: rgb(59, 58, 58);
+    background-image: linear-gradient(90deg, #272727, #273f21);
 }
 
 
