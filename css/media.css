@@ -1,4 +1,11 @@
-@media only screen and (max-width:767px){
+@media only screen and (min-width:960px) and (max-width:1299px){
+    .lvl1_1, .lvl2_1, .lvl3_1,.lvl1_2, .lvl2_2, .lvl2_4, .lvl3_2,.lvl1_3, .lvl2_3, .lvl3_3, .lvl3_4, .nature_p{
+        width: 95%;
+        left: 2%;
+    }
+}
+
+@media only screen and (max-width:959px){
 
     #main_overlay{
         background-position: 48% 50%;
@@ -115,7 +122,11 @@
         top: 65%;
     }
 
-    .nature_p3_1, .nature_p3_new{
+    .nature_p3_1{
+        top: 70%;
+    }
+
+    .nature_p3_new{
         top: 70%;
     }
     
