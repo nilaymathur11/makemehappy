@@ -4,12 +4,12 @@
         left: 2%;
     }
 
-    .navbar ul{
-        width: 500px;
+    .home_content_top{
+        width: 50%;
     }
 
-    .navbar ul li{
-        margin: 10px 30px;
+    .btn_home{
+        width: 60%;
     }
 }
 
@@ -186,14 +186,9 @@
         display: none;
     }
 
-    .home_main{
-       /* background-size: cover; */
-       /* background-repeat: no-repeat; */
-       background-position: center center;
-    }
-
     nav{
-        padding: 30px;
+        padding: 20px 0px;
+        padding-right: 10px;
         box-sizing: border-box;
         display: flex;
         align-items: center;
@@ -208,9 +203,9 @@
     .mob_menu{
         position: fixed;
         width: 100%;
-        height: 82vh;
+        height: 83vh;
         text-align: center;
-        top: 18%;
+        top: 17%;
         left: 100%;
         transition: 0.3s linear;
         z-index: 999;
@@ -221,7 +216,7 @@
     .menu_ico, .menu_ico2{
         color: rgb(26, 69, 33);
         width: 35px;
-        font-size: 30px;
+        font-size: 28px;
         margin-left: 100px;
     }
 
@@ -234,12 +229,12 @@
         justify-content: center;
         flex-wrap: wrap;
         align-items: center;
-        margin-top: 50px;
+        margin-top: 10px;
         margin-right: 20px;
     }
 
     .mob_menu ul li{
-        margin: 50px 0px;
+        margin: 40px 0px;
         flex-basis: 100%;
         font-size: 21px;
         text-transform: capitalize;
@@ -255,7 +250,7 @@
     }
 
     .btn_home{
-        width: 100%;
+        width: 80%;
     }
 
     .btn_home strong, .click_mmh strong{
@@ -263,7 +258,7 @@
     }
 
     .home_content{
-        padding: 0px;
+        width: 100%;
     }
 
     .home_content_top{
@@ -273,6 +268,7 @@
     }
 
     .home_content_bottom{
+        padding: 10px;
         padding-bottom: 0px;
         font-size: 18px;
         margin: auto;
@@ -295,8 +291,10 @@
     }
 
     .mob_home_logo{
-        height: 110px;
-        width: 110px;
+        height: 90px;
+        width: 90px;
+        margin: 0px;
+        margin-left: 20px;
     }
 
 }
