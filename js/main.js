@@ -140,7 +140,7 @@ $('.forward_btn').click(
                 typeSpeed: 1,
                 startDelay: 1000,
                 backSpeed: 1,
-                backDelay: 2000,
+                backDelay: 1000,
                 loop: false,
                 cursorChar: "|",
                 contentType: 'html'
@@ -205,11 +205,11 @@ $('.forward_btn').click(
         else if ($('#slide4').hasClass('carousel-item-next')) {
 
             setTimeout(function () {
-                $('.slide_lvl2 .welcome_div').css('opacity', '1');
+                $('#slide4 .welcome_div').css('opacity', '1');
             }, 500);
 
             setTimeout(function () {
-                $('.slide_lvl2 .welcome_div').css('opacity', '0');
+                $('#slide4 .welcome_div').css('opacity', '0');
                 $('.dog_5').removeClass('d-none');
                 $("#dog_txt5").typed({
                     strings: ["what you are seeing", `on the screen ${user_name} is`, "called a NOVA", "you can drag and zoom", "this NOVA even after I go"],
@@ -224,7 +224,7 @@ $('.forward_btn').click(
             }, 4000);
 
             setTimeout(function () {
-                $('.slide_lvl2 .welcome_div').addClass('d-none');
+                $('#slide4 .welcome_div').addClass('d-none');
                 $('.dog_5').css('transition', '1s')
                 $('.dog_5').css('opacity', '0');
                 $('.slide4_bg').css('position', 'unset');
@@ -237,7 +237,7 @@ $('.forward_btn').click(
 
             $('.dog_6').removeClass('d-none');
             $("#dog_txt6").typed({
-                strings: ["writing down our thoughts", "helps our mind alot", "gives relief from stress,anxiety,", "suffering and so here i'm", "giving you a lantern on which", "you can write down your", "thoughts and feel relieved."],
+                strings: ["writing down our thoughts", "helps our mind alot", "gives relief from stress, anxiety,", "suffering and so here i'm", "giving you a lantern on which", "you can write down your", "thoughts and feel relieved."],
                 typeSpeed: 1,
                 startDelay: 1000,
                 backSpeed: 1,
@@ -286,7 +286,7 @@ $('.forward_btn').click(
                 $("#dog_txt6").remove();
                 $("#dog_txt6_p2").removeClass('d-none');
                 $("#dog_txt6_p2").typed({
-                    strings: ["you can sit here peacefully", "or click on forward button"],
+                    strings: ["you can sit here peacefully", "or click on next button"],
                     typeSpeed: 1,
                     startDelay: 1000,
                     backSpeed: 1,
@@ -379,30 +379,9 @@ $('.forward_btn').click(
         }
 
         else if ($('#slide8').hasClass('carousel-item-next')) {
-            $('.dog_8').removeClass('d-none');
-            $("#dog_txt8").typed({
-                strings: ["this game is one of my favourites", "i hope you will like it too"],
-                typeSpeed: 1,
-                startDelay: 1000,
-                backSpeed: 1,
-                backDelay: 1000,
-                loop: false,
-                cursorChar: "|",
-                contentType: 'html'
-            });
-
-            setTimeout(function () {
-                $('.dog_8').css('transition', '1s')
-                $('.dog_8').css('opacity', '0');
-                $('.forward_btn').removeClass('green_bg');
-                $('.forward_btn').show();
-            }, 6000);
-        }
-
-        else if ($('#slide9').hasClass('carousel-item-next')) {
             $('.dog_9').removeClass('d-none');
             $("#dog_txt9").typed({
-                strings: ["i hope you are enjoying", "my selection of games", "if not i'm really sorry", "suggest me some good games", "and i'll try to add them"],
+                strings: ["this game is one of my favourites", "i hope you will like it too"],
                 typeSpeed: 1,
                 startDelay: 1000,
                 backSpeed: 1,
@@ -415,6 +394,27 @@ $('.forward_btn').click(
             setTimeout(function () {
                 $('.dog_9').css('transition', '1s')
                 $('.dog_9').css('opacity', '0');
+                $('.forward_btn').removeClass('green_bg');
+                $('.forward_btn').show();
+            }, 6000);
+        }
+
+        else if ($('#slide9').hasClass('carousel-item-next')) {
+            $('.dog_10').removeClass('d-none');
+            $("#dog_txt10").typed({
+                strings: ["i hope you are enjoying", "my selection of games", "if not i'm really sorry", "suggest me some good games", "and i'll try to add them"],
+                typeSpeed: 1,
+                startDelay: 1000,
+                backSpeed: 1,
+                backDelay: 1000,
+                loop: false,
+                cursorChar: "|",
+                contentType: 'html'
+            });
+
+            setTimeout(function () {
+                $('.dog_10').css('transition', '1s')
+                $('.dog_10').css('opacity', '0');
                 $('.forward_btn').removeClass('green_bg');
             }, 15000);
         }
