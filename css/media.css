@@ -1,27 +1,15 @@
 @media only screen and (min-width:960px) and (max-width:1299px) {
 
-    .lvl1_1,
-    .lvl2_1,
-    .lvl3_1,
-    .lvl1_2,
-    .lvl2_2,
-    .lvl2_4,
-    .lvl3_2,
-    .lvl1_3,
-    .lvl2_3,
-    .lvl3_3,
-    .lvl3_4,
-    .nature_p {
-        width: 95%;
-        left: 2%;
-    }
-
     .home_content_top {
         width: 50%;
     }
 
     .btn_home {
         width: 60%;
+    }
+
+    .click_mmh strong{
+        font-size: 25px;
     }
 }
 
@@ -69,6 +57,7 @@
     }
 
     .butterfly {
+        top: 14%;
         height: 120px;
         width: 120px;
     }
@@ -81,84 +70,79 @@
         height: 90px;
         width: 90px;
     }
+    
+    .click_mmh {
+        width: 280px;
+    }
+
+    .dog_sprite{
+        width: 120px;
+        height: 120px;
+    }
+
+    .dog_txt{
+        width: 270px;
+        font-size: 14px;
+        padding: 0px 5px;
+        top: 32%;
+        right: 5%;
+        height: 50px;
+    }
+
+    .dog_txt input{
+        position: absolute;
+        bottom: -70%;
+        left: -40%;
+        width: 200px;
+        height: 40px;
+    }
+
+    .dog_name{
+        top: 0%;
+        left: 30%;
+    }
+
+    .dog{
+        left: -1%;
+        animation: dog_move 1s forwards;
+    }
+
+    @keyframes dog_move {
+        from {
+            bottom: -100%;
+        }
+    
+        to {
+            bottom: -4%;
+        }
+    }
 
     .forward_btn,
     .reverse_btn {
         font-size: 45px;
         width: 50px;
-        height: 60px;
-        opacity: 0.9;
-        background-image: linear-gradient(90deg, #817d7d, #4d8340);
+        height: 50px;
     }
 
-    .lvl1_1,
-    .lvl2_1,
-    .lvl3_1,
-    .lvl1_2,
-    .lvl2_2,
-    .lvl2_4,
-    .lvl3_2,
-    .lvl1_3,
-    .lvl2_3,
-    .lvl3_3,
-    .lvl3_4 {
-        padding: 10px;
-        font-size: 16px;
-        left: 0%;
+    .heart{
+        font-size: 200px;
+    }
+
+    .welcome_div{
+        font-size: 30px;
+        line-height: 60px;
+        text-align: center;
+    }
+
+    .door img{
+        height: 250px;
+        width: 250px;
+    }
+
+    .heart_cont, .door_cont{
+        font-size: 20px;
+        padding: 8px 20px;
         width: 100%;
-    }
-
-    .lvl1_2 {
-        top: 43%;
-    }
-
-    .lvl2_2 {
-        top: 38%;
-    }
-
-    .lvl2_3 {
-        top: 56%;
-        line-height: 40px;
-    }
-
-    .lvl2_4 {
-        top: 87%;
-    }
-
-    .lvl1_2_new {
-        top: 48%;
-        line-height: unset;
-    }
-
-    .lvl1_3_new {
-        top: 82%;
-    }
-
-    .nature_p {
-        font-size: 16px;
-        left: 0%;
-        width: 100%;
-        line-height: 30px;
-    }
-
-    .nature_p1 {
-        top: 20%;
-    }
-
-    .nature_p2 {
-        top: 38%;
-    }
-
-    .nature_p3 {
-        top: 65%;
-    }
-
-    .nature_p3_1 {
-        top: 70%;
-    }
-
-    .nature_p3_new {
-        top: 70%;
     }
 
     .audio {
@@ -167,43 +151,8 @@
         top: 92%;
     }
 
-    .lvl3_2 {
-        top: 37%;
-    }
 
-    .lvl3_3 {
-        height: 300px;
-        top: 46%;
-    }
-
-    .lvl3_2_new {
-        top: 20%;
-    }
-
-    .lvl3_3_new {
-        top: 35%;
-    }
-
-    .lvl3_4 {
-        font-size: 10px;
-        line-height: 16px;
-        top: 93%;
-    }
-
-    .last_slide {
-        top: 20%;
-        line-height: 38px;
-        background-position: 10% 60%;
-        font-size: 15px;
-    }
-
-    .lvl3_3_mob {
-        display: block;
-    }
-
-    .lvl3_3_pc {
-        display: none;
-    }
+    /* Home Page CSS START  */
 
     .navbar {
         display: none;
@@ -335,4 +284,15 @@
         margin-left: 20px;
     }
 
+}
+
+@media only screen and (max-width: 767px){
+    .game_mob {
+        display: block;
+        height: 300px;
+    }
+
+    .game_pc {
+        display: none;
+    }
 }
