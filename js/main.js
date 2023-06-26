@@ -70,6 +70,7 @@ $('#btn1').click(
     function () {
         $('#main_overlay').css('animation', 'main_overlay 1s 0s 1 ease-in forwards');
         $('.slides').show();
+        $(".slide_bg_video").trigger('play');
 
         setTimeout(function () {
             $('.slide_lvl1 .welcome_div').append(user_name);
