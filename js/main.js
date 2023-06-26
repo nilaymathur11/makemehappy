@@ -54,7 +54,7 @@ $(document).ready(
                     }
                 })
             }
-            , 6200);
+            , 6500);
 
         $('.heart').click(
             function () {

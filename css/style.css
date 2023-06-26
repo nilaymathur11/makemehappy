@@ -16,10 +16,6 @@ button{
     color: black;
 }
 
-body {
-    overflow: hidden;
-}
-
 main {
     width: 100%;
     font-family: 'Merienda', cursive;
@@ -34,6 +30,7 @@ main {
     position: absolute;
     top: 0px;
     z-index: 1000;
+    overflow: hidden;
 }
 
 .dog {
