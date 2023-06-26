@@ -35,11 +35,6 @@ $(document).ready(
                 $('#user_name').select();
                 $('#user_name').keyup(function (e) {
                     if ((e.key == 'Enter') && (e.target.value != '')) {
-                        $("body").css({
-                            "zoom" : "0%",
-                            "zoom" : "0",
-                            "-moz-transform" : "scale(0, 0)"
-                        })
                         user_name = $('#user_name').val();
                         $('#user_name').addClass('d-none');
                         $("#dog_txt1").remove();
@@ -75,6 +70,7 @@ $('#btn1').click(
     function () {
         $('#main_overlay').css('animation', 'main_overlay 1s 0s 1 ease-in forwards');
         $('.slides').show();
+        $("#slide6_vid").trigger('play');
 
         setTimeout(function () {
             $('.slide_lvl1 .welcome_div').append(user_name);
@@ -135,7 +131,6 @@ $('#btn1').click(
 $('.forward_btn').click(
     function () {
         $('.forward_btn').hide();
-        $(".slide6_vid").trigger('play');
 
         if ($('#slide2').hasClass('carousel-item-next')) {
 
@@ -271,11 +266,6 @@ $('.forward_btn').click(
             })
 
             lantern_submit = () => {
-                $("body").css({
-                    "zoom" : "0%",
-                    "zoom" : "0",
-                    "-moz-transform" : "scale(0, 0)"
-                })
                 $('.lantern_user').addClass('lantern_userafter');
                 $('.lantern_user textarea').addClass('lantern_userafter_textarea');
                 $('.lantern_user textarea').attr("disabled", true);

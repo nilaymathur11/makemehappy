@@ -81,8 +81,7 @@
     }
 
     .dog_txt {
-        min-width: unset;
-        width: 270px;
+        min-width: 270px;
         font-size: 14px;
         padding: 0px 5px;
         top: 32%;
@@ -296,11 +295,18 @@
 @media only screen and (max-width: 767px) {
     .heart {
         font-size: 150px;
+        padding-top: 50px;
     }
 
     .float_box,.welcome_div{
+        align-items: flex-start;
+        padding-top: 150px;
         font-size: 25px;
         line-height: 50px;
+    }
+
+    .welcome_div{
+        padding-top: 250px;
     }
 
     .heart_cont,
