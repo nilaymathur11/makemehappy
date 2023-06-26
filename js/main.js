@@ -356,7 +356,7 @@ $('.forward_btn').click(
                 $('#slide7 .welcome_div').css('opacity', '0');
                 $('.dog_8').removeClass('d-none');
                 $("#dog_txt8").typed({
-                    strings: [`do you remember the time ${user_name}`, "when you used to play a lot", "either outdoor or indoor games", "wasn't life fun till then?", "i want you to experience that feeling", "once again so i've gathered a few", "old retro games to try to make", "you relive those moments once again", "i'll go now but don't worry!", "i'll comeback for you again"],
+                    strings: [`do you remember the time ${user_name}`, "when you used to play a lot", "either outdoor or indoor games", "wasn't life fun till then?", "i want you to experience that", "feeling once again so i've gathered", "a few old retro games to try to", "make you relive those moments", "once again. i'll go now but", "i'll comeback again!"],
                     typeSpeed: 1,
                     startDelay: 1000,
                     backSpeed: 1,
@@ -397,7 +397,7 @@ $('.forward_btn').click(
                 $('.dog_9').css('opacity', '0');
                 $('.forward_btn').removeClass('green_bg');
                 $('.forward_btn').show();
-            }, 6000);
+            }, 7000);
         }
 
         else if ($('#slide9').hasClass('carousel-item-next')) {

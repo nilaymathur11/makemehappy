@@ -298,21 +298,15 @@
         font-size: 150px;
     }
 
-    .float_box {
-        align-items: flex-start;
-        padding-top: 100px;
-        font-size: 30px;
-        line-height: 60px;
-    }
-
-    .welcome_div{
-        font-size: 30px;
-        line-height: 60px;
+    .float_box,.welcome_div{
+        font-size: 25px;
+        line-height: 50px;
     }
 
     .heart_cont,
     .door_cont {
-        font-size: 22px;
+        font-size: 20px;
+        line-height: 45px;
     }
 
     .lantern_user,.lantern_ask{

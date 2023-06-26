@@ -491,6 +491,7 @@ main {
 
 .lantern_user textarea {
     text-align: center;
+    text-transform: capitalize;
 }
 
 .lantern_userafter {
