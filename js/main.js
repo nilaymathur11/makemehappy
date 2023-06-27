@@ -8,7 +8,9 @@ window.addEventListener('resize', () => {
     document.documentElement.style.setProperty('--vh', `${vh}px`);
 });
 
-const dog_txt1 = ['Hello My Friend, Welcome To MMH', 'My Name is mishi!'];
+var window_size = window.innerWidth;
+
+const dog_txt1 = ['Hello My Friend, Welcome To MMH', 'My Name is Tikki!'];
 var user_name = '';
 $('.slides').hide();
 $('#btn1').attr('disabled', true);
@@ -17,7 +19,7 @@ $('.forward_btn').hide();
 $(document).ready(
     function () {
         $("#dog_txt1").typed({
-            strings: ["Greetings, my friend", "My Name is mishi!", "May I know your name ?"],
+            strings: ["Greetings, my friend", "My Name is Tikki!", "May I know your name ?"],
             typeSpeed: 1,
             startDelay: 1000,
             backSpeed: 1,
@@ -34,7 +36,31 @@ $(document).ready(
                 $('#user_name').css('opacity', '1');
                 $('#user_name').select();
                 $('#user_name').keyup(function (e) {
+                    if($('#user_name').val().length <= 10){
+                        user_name = $('#user_name').val();
+                    }
+                    if($('#user_name').val().length > 10){
+                        $('#user_name').val(user_name);
+                        if(window_size > 768){
+                            $('.name_error').css({
+                                'opacity' : '1',
+                                'bottom' : '-50%'
+                            })
+                        }else{
+                            $('.name_error').css({
+                                'opacity' : '1',
+                                'bottom' : '20%'
+                            })
+                        }
+    
+                    }
                     if ((e.key == 'Enter') && (e.target.value != '')) {
+                        $("body").css({
+                            "zoom" : "100%",
+                            "zoom" : "1",
+                            "-moz-transform" : "scale(1, 1)"
+                        })
+                        $('.name_error').css('display','none');
                         user_name = $('#user_name').val();
                         $('#user_name').addClass('d-none');
                         $("#dog_txt1").remove();
@@ -152,7 +178,7 @@ $('.forward_btn').click(
                 $('.dog_3').css('opacity', '0');
                 $('.forward_btn').show();
                 $('.forward_btn').addClass('blue_bg');
-            }, 14000);
+            }, 13000);
         }
 
         else if ($('#slide3').hasClass('carousel-item-next')) {
@@ -250,13 +276,20 @@ $('.forward_btn').click(
             setTimeout(function () {
                 $('.lantern_user textarea').val('');
                 $('.lantern_user').css('opacity', '1');
-            }, 22000);
+                $('.lantern_user textarea').select();
+            }, 21000);
+
+            $('.lantern_user textarea').on('keyup',function(e){
+                if(e.key == 'Enter' && (e.target.value != '')){
+                    lantern_submit();
+                }
+            })
 
             $('.lantern_submit').click(function () {
                 $("body").css({
-                    "zoom" : "0%",
-                    "zoom" : "0",
-                    "-moz-transform" : "scale(0, 0)"
+                    "zoom" : "100%",
+                    "zoom" : "1",
+                    "-moz-transform" : "scale(1, 1)"
                 })
                 $('.lantern_user').addClass('lantern_userafter');
                 $('.lantern_user textarea').addClass('lantern_userafter_textarea');
@@ -284,6 +317,7 @@ $('.forward_btn').click(
                         </div>
                     `
                 )
+                $('.lantern_user textarea').select();
             });
 
             $('.lantern_opt2').click(function () {
@@ -430,7 +464,6 @@ $('.forward_btn').click(
         }
     }
 );
-
 
 // End of Index Page Script
 
