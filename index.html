@@ -71,6 +71,7 @@
                     <input type="text" placeholder="Enter Your Name" id="user_name" name="user_name">
                     <span id="dog_txt1_p2" style="white-space:pre;" class="d-none"></span>
                     <div class="name_error">Limit Reached! Press Enter</div>
+                    <div class="zoom_error">Please Zoom Out For Best Experience!</div>
                 </div>
             </div>
         </section>
@@ -275,7 +276,8 @@
                     <div class="carousel-item" id="slide6">
                         <section class="slide_lvl">
                             <div class="slide_bg slide_bg_video">
-                                <video loop muted id="slide6_vid">
+
+                                <video loop muted id="slide6_vid" webkit-playsinline playsinline>
                                     <source src="videos/slide6bg.mp4" type="video/mp4">
                                 </video>
                             </div>

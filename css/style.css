@@ -106,7 +106,7 @@ main {
     position: relative;
 }
 
-.name_error{
+.name_error,.zoom_error{
     background-color: white;
     font-size: 14px;
     color: red;

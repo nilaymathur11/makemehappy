@@ -294,7 +294,7 @@
 
 @media only screen and (max-width: 767px) {
 
-    .name_error{
+    .name_error,.zoom_error{
         right: 0%;
     }
 

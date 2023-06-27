@@ -55,12 +55,16 @@ $(document).ready(
     
                     }
                     if ((e.key == 'Enter') && (e.target.value != '')) {
-                        $("body").css({
-                            "zoom" : "100%",
-                            "zoom" : "1",
-                            "-moz-transform" : "scale(1, 1)"
-                        })
                         $('.name_error').css('display','none');
+                        if(window_size < 768){
+                            $('.zoom_error').css({
+                                'opacity' : '1',
+                                'bottom' : '100%'
+                            })
+                        }
+                        setTimeout(function(){
+                            $('.zoom_error').css('display','none')
+                        },2000)
                         user_name = $('#user_name').val();
                         $('#user_name').addClass('d-none');
                         $("#dog_txt1").remove();
@@ -286,11 +290,6 @@ $('.forward_btn').click(
             })
 
             $('.lantern_submit').click(function () {
-                $("body").css({
-                    "zoom" : "100%",
-                    "zoom" : "1",
-                    "-moz-transform" : "scale(1, 1)"
-                })
                 $('.lantern_user').addClass('lantern_userafter');
                 $('.lantern_user textarea').addClass('lantern_userafter_textarea');
                 $('.lantern_user textarea').attr("disabled", true);
@@ -322,6 +321,15 @@ $('.forward_btn').click(
 
             $('.lantern_opt2').click(function () {
                 $('.lantern_ask').addClass('d-none');
+                if(window_size < 768){
+                    $('.zoom_error').css({
+                        'opacity' : '1',
+                        'bottom' : '100%'
+                    })
+                }
+                setTimeout(function(){
+                    $('.zoom_error').css('display','none')
+                },2000)
                 $("#dog_txt6").next().remove();
                 $("#dog_txt6").remove();
                 $("#dog_txt6_p2").removeClass('d-none');
@@ -415,7 +423,7 @@ $('.forward_btn').click(
                 $('.dog_8').css('opacity', '0');
                 $('.forward_btn').removeClass('green_bg');
                 $('.forward_btn').show();
-            }, 42000);
+            }, 41000);
         }
 
         else if ($('#slide8').hasClass('carousel-item-next')) {
