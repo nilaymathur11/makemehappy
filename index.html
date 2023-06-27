@@ -87,56 +87,57 @@
                         <section class="slide_lvl slide_lvl1">
                             <div class="slide_bg heart_animation">
                                 <css-doodle>
-                                        --color: #51eaea,
-                                        #fffde1,
-                                        #ff9d76,
-                                        #FB3569;
+                                    --color: #51eaea,
+                                    #fffde1,
+                                    #ff9d76,
+                                    #FB3569;
 
-                                        @grid: 30x1 / 100vw 100vh / #270f34;
+                                    @grid: 30x1 / 100vw 100vh / #270f34;
 
-                                        :container {
-                                            perspective: 30vmin;
-                                            --deg: @p(-180deg, 180deg);
-                                        }
+                                    :container {
+                                    perspective: 30vmin;
+                                    --deg: @p(-180deg, 180deg);
+                                    }
 
-                                        :after,
-                                        :before {
-                                            content: '';
-                                            background: @p(--color);
-                                            @place: @r(100%) @r(100%);
-                                            @size: @r(6px);
-                                            @shape: heart;
-                                        }
+                                    :after,
+                                    :before {
+                                    content: '';
+                                    background: @p(--color);
+                                    @place: @r(100%) @r(100%);
+                                    @size: @r(6px);
+                                    @shape: heart;
+                                    }
 
-                                        @place: center;
-                                        @size: 18vmin;
+                                    @place: center;
+                                    @size: 18vmin;
 
-                                        box-shadow: @m2(0 0 50px @p(--color));
-                                        background: @m100(radial-gradient(@p(--color) 50%, transparent 0) @r(-20%, 120%) @r(-20%, 100%) / 1px 1px no-repeat);
+                                    box-shadow: @m2(0 0 50px @p(--color));
+                                    background: @m100(radial-gradient(@p(--color) 50%, transparent 0) @r(-20%, 120%)
+                                    @r(-20%, 100%) / 1px 1px no-repeat);
 
-                                        will-change: transform,
-                                        opacity;
-                                        animation: scale-up 12s linear infinite;
-                                        animation-delay: calc(-12s / @I * @i);
+                                    will-change: transform,
+                                    opacity;
+                                    animation: scale-up 12s linear infinite;
+                                    animation-delay: calc(-12s / @I * @i);
 
-                                        @keyframes scale-up {
+                                    @keyframes scale-up {
 
-                                            0%,
-                                            95.01%,
-                                            100% {
-                                                transform: translateZ(0) rotate(0);
-                                                opacity: 0;
-                                            }
+                                    0%,
+                                    95.01%,
+                                    100% {
+                                    transform: translateZ(0) rotate(0);
+                                    opacity: 0;
+                                    }
 
-                                            10% {
-                                                opacity: 1;
-                                            }
+                                    10% {
+                                    opacity: 1;
+                                    }
 
-                                            95% {
-                                                transform:
-                                                    translateZ(35vmin) rotateZ(var(--deg));
-                                            }
-                                        }
+                                    95% {
+                                    transform:
+                                    translateZ(35vmin) rotateZ(var(--deg));
+                                    }
+                                    }
                                 </css-doodle>
                             </div>
                             <div class="logo_slide logo">
@@ -151,7 +152,8 @@
                                         &#9829;
                                     </div>
                                     <div class="heart_cont d-none">
-                                        "congratulations! the first biggest step is to choose the path towards happiness and you have chosen it" <br>
+                                        "congratulations! the first biggest step is to choose the path towards happiness
+                                        and you have chosen it" <br>
                                         <button class="heart_cont_btn">Continue</button>
                                     </div>
                                 </div>
@@ -262,7 +264,8 @@
                                 </div>
                                 <div class="lantern_user">
                                     <img src="images/lantern.svg" alt=""> <br>
-                                    <textarea name="user_thoughts" id="user_thoughts" cols="25" rows="6" placeholder="Write Your Thoughts Here"></textarea> <br>
+                                    <textarea name="user_thoughts" id="user_thoughts" cols="25" rows="6"
+                                        placeholder="Write Your Thoughts Here"></textarea> <br>
                                     <button class="lantern_submit">Submit</button>
                                 </div>
                                 <div class="lantern_ask d-none">
@@ -275,11 +278,12 @@
                     </div>
                     <div class="carousel-item" id="slide6">
                         <section class="slide_lvl">
-                            <div class="slide_bg slide_bg_video">
-
-                                <video loop muted id="slide6_vid" webkit-playsinline playsinline>
-                                    <source src="videos/slide6bg.mp4" type="video/mp4">
-                                </video>
+                            <div class="slide_bg slide_bg_video" allow="autoplay; encrypted-media" allowfullscreen=""
+                                gesture="media" muted="true" loop="true" playsinline="true" preload="none"
+                                autoplay="true">
+                                <video src="videos/slide6bg.mp4" allow="autoplay; encrypted-media" allowfullscreen=""
+                                    gesture="media" muted="true" loop="true" playsinline="true" preload="none"
+                                    autoplay="true"></video>
                             </div>
                             <div class="logo_slide logo">
                                 <a href="index.html"><img src="images/logo.png" alt="logo"></a>
@@ -321,25 +325,28 @@
                                 <div class="row">
                                     <div class="col-10 col-md-5 col-xl-3 game_head my-5 p-2 p-md-4">
                                         super mario bros.
-                                        <div class="game_hoverEffect"><div></div></div>
+                                        <div class="game_hoverEffect">
+                                            <div></div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-8 main_game game_pc">
                                         <iframe src='https://www.miniplay.com/embed/super-mario-bros' frameborder='0'
-                                        allowfullscreen></iframe>
+                                            allowfullscreen></iframe>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-10 main_game game_mob">
-                                        <iframe src='https://www.miniplay.com/game/super-mario-bros/play' frameborder='0'
-                                        allowfullscreen></iframe>
+                                        <iframe src='https://www.miniplay.com/game/super-mario-bros/play'
+                                            frameborder='0' allowfullscreen></iframe>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-11 col-md-9 col-xl-6 mt-lg-5 game_guide">
-                                        <sup>*</sup>(For Best Experience Use FullScreen Mode And Set Button Controls According
-                                    To Your Preference.)
+                                        <sup>*</sup>(For Best Experience Use FullScreen Mode And Set Button Controls
+                                        According
+                                        To Your Preference.)
                                     </div>
                                 </div>
                             </div>
@@ -364,25 +371,28 @@
                                 <div class="row">
                                     <div class="col-10 col-md-5 col-xl-3 game_head my-5 p-2 p-md-4">
                                         Super-BomberMan
-                                        <div class="game_hoverEffect"><div></div></div>
+                                        <div class="game_hoverEffect">
+                                            <div></div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-8 main_game game_pc">
                                         <iframe src='https://www.miniplay.com/embed/super-bomberman' frameborder='0'
-                                    allowfullscreen></iframe>
+                                            allowfullscreen></iframe>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-10 main_game game_mob">
                                         <iframe src='https://www.miniplay.com/game/super-bomberman/play' frameborder='0'
-                                    allowfullscreen></iframe>
+                                            allowfullscreen></iframe>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-11 col-md-9 col-xl-6 mt-lg-5 game_guide">
-                                        <sup>*</sup>(For Best Experience Use FullScreen Mode And Set Button Controls According
-                                    To Your Preference.)
+                                        <sup>*</sup>(For Best Experience Use FullScreen Mode And Set Button Controls
+                                        According
+                                        To Your Preference.)
                                     </div>
                                 </div>
                             </div>
@@ -407,25 +417,28 @@
                                 <div class="row">
                                     <div class="col-10 col-md-5 col-xl-3 game_head my-5 p-2 p-md-4">
                                         Space - Pin Ball
-                                        <div class="game_hoverEffect"><div></div></div>
+                                        <div class="game_hoverEffect">
+                                            <div></div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-8 main_game game_pc">
-                                        <iframe src='https://www.miniplay.com/embed/space-adventure-pinball' frameborder='0'
-                                    allowfullscreen></iframe>
+                                        <iframe src='https://www.miniplay.com/embed/space-adventure-pinball'
+                                            frameborder='0' allowfullscreen></iframe>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-10 main_game game_mob">
-                                        <iframe src='https://www.miniplay.com/game/space-adventure-pinball/play' frameborder='0'
-                                    allowfullscreen></iframe>
+                                        <iframe src='https://www.miniplay.com/game/space-adventure-pinball/play'
+                                            frameborder='0' allowfullscreen></iframe>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-11 col-md-9 col-xl-6 mt-lg-5 game_guide">
-                                        <sup>*</sup>(For Best Experience Use FullScreen Mode And Set Button Controls According
-                                    To Your Preference.)
+                                        <sup>*</sup>(For Best Experience Use FullScreen Mode And Set Button Controls
+                                        According
+                                        To Your Preference.)
                                     </div>
                                 </div>
                             </div>

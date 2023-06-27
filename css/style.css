@@ -108,6 +108,7 @@ main {
 
 .name_error,.zoom_error{
     background-color: white;
+    text-align: center;
     font-size: 14px;
     color: red;
     text-transform: capitalize;
@@ -120,6 +121,12 @@ main {
     right: -70%;
     opacity: 0;
     transition: 0.5s;
+}
+
+.zoom_error{
+    font-size: 10px;
+    width: 150px;
+    padding: 5px;
 }
 
 .dog_txt input:focus {

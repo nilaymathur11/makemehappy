@@ -59,12 +59,12 @@ $(document).ready(
                         if(window_size < 768){
                             $('.zoom_error').css({
                                 'opacity' : '1',
-                                'bottom' : '100%'
+                                'bottom' : '150%'
                             })
                         }
                         setTimeout(function(){
                             $('.zoom_error').css('display','none')
-                        },2000)
+                        },4000)
                         user_name = $('#user_name').val();
                         $('#user_name').addClass('d-none');
                         $("#dog_txt1").remove();
@@ -100,7 +100,6 @@ $('#btn1').click(
     function () {
         $('#main_overlay').css('animation', 'main_overlay 1s 0s 1 ease-in forwards');
         $('.slides').show();
-        $("#slide6_vid").trigger('play');
 
         setTimeout(function () {
             $('.slide_lvl1 .welcome_div').append(user_name);
@@ -324,12 +323,12 @@ $('.forward_btn').click(
                 if(window_size < 768){
                     $('.zoom_error').css({
                         'opacity' : '1',
-                        'bottom' : '100%'
+                        'bottom' : '150%'
                     })
                 }
                 setTimeout(function(){
                     $('.zoom_error').css('display','none')
-                },2000)
+                },4000)
                 $("#dog_txt6").next().remove();
                 $("#dog_txt6").remove();
                 $("#dog_txt6_p2").removeClass('d-none');
