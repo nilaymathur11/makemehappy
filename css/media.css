@@ -295,7 +295,7 @@
 @media only screen and (max-width: 767px) {
 
     .name_error,.zoom_error{
-        right: 0%;
+        left: 10%;
     }
 
     .heart {
