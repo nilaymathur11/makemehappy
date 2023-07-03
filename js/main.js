@@ -407,7 +407,7 @@ $('.forward_btn').click(
                 $('#slide6 .welcome_div').css('opacity', '0');
                 $('.dog_7').fadeIn();
                 $("#dog_txt7").typed({
-                    strings: [`isn't nature so peaceful ${user_name}?`, "I just thought of a poem", "River's tranquil embrace,", "Gently winding through time.", "Whispers of ancient tales,", "Flowing secrets untold.", "Nature's endless symphony,", "Eternal current's embrace.", `you can close your eyes ${user_name}`, "and feel the river flowing"],
+                    strings: [`isn't nature so peaceful ${user_name}?`, "I just thought of a poem", "River's tranquil embrace,", "Gently winding through time.", "Whispers of ancient tales,", "Flowing secrets untold.", "Nature's endless symphony,", "Eternal current's embrace.", `you can close your eyes ${user_name}`, "and feel the water flowing"],
                     typeSpeed: 1,
                     startDelay: 1000,
                     backSpeed: 1,
@@ -542,10 +542,10 @@ $('.forward_btn').click(
 
             setTimeout(function () {
                 $('#slide10 .end_div').css('opacity', '0');
-            }, 104000)
+            }, 112000)
             setTimeout(function () {
                 $('#slide10 .end_div').css('display', 'none');
-            }, 112000)
+            }, 118000)
         }
     }
 );
