@@ -199,11 +199,14 @@ $('.forward_btn').click(
                 contentType: 'html'
             });
 
+            setTimeout(function(){
+                $('.forward_btn').show();
+                $('.forward_btn').addClass('blue_bg');
+            },6000)
+
             setTimeout(function () {
                 $('.dog_3').css('transition', '1s')
                 $('.dog_3').css('opacity', '0');
-                $('.forward_btn').show();
-                $('.forward_btn').addClass('blue_bg');
             }, 12000);
         }
 
@@ -288,14 +291,16 @@ $('.forward_btn').click(
                     contentType: 'html'
                 });
             }, 4000);
+            setTimeout(function(){
+                $('.forward_btn').removeClass('blue_bg');
+                $('.forward_btn').show();
+            },6000)
 
             setTimeout(function () {
                 $('#slide4 .welcome_div').hide();
                 $('.dog_5').css('transition', '1s')
                 $('.dog_5').css('opacity', '0');
                 $('.slide4_bg').css('position', 'unset');
-                $('.forward_btn').removeClass('blue_bg');
-                $('.forward_btn').show();
             }, 18000);
         }
 
@@ -316,6 +321,10 @@ $('.forward_btn').click(
                 cursorChar: "|",
                 contentType: 'html'
             });
+            setTimeout(function(){
+                $('.forward_btn').addClass('blue_bg');
+                $('.forward_btn').show();
+            },6000)
             setTimeout(function () {
                 $('.lantern_user textarea').val('');
                 $('.lantern_user').css('opacity', '1');
@@ -376,8 +385,6 @@ $('.forward_btn').click(
                 setTimeout(function () {
                     $('.dog_6').css('transition', '1s')
                     $('.dog_6').css('opacity', '0');
-                    $('.forward_btn').addClass('blue_bg');
-                    $('.forward_btn').show();
                 }, 6000);
             })
 
@@ -417,14 +424,16 @@ $('.forward_btn').click(
                     contentType: 'html'
                 });
             }, 4000);
+            setTimeout(function(){
+                $('.forward_btn').removeClass('blue_bg');
+                $('.forward_btn').addClass('green_bg');
+                $('.forward_btn').show();
+            },6000)
 
             setTimeout(function () {
                 $('#slide6 .welcome_div').hide();
                 $('.dog_7').css('transition', '1s')
                 $('.dog_7').css('opacity', '0');
-                $('.forward_btn').removeClass('blue_bg');
-                $('.forward_btn').addClass('green_bg');
-                $('.forward_btn').show();
             }, 36000);
         }
 
@@ -440,6 +449,8 @@ $('.forward_btn').click(
             setTimeout(function () {
                 $('#slide7 .welcome_div').css('opacity', '0');
                 $('.dog_8').fadeIn();
+                $('.forward_btn').removeClass('green_bg');
+                $('.forward_btn').show();
                 $("#dog_txt8").typed({
                     strings: [`do you remember the time ${user_name}`, "when you used to play a lot", "either outdoor or indoor games", "wasn't life fun till then?", "i want you to experience that", "feeling once again so i've gathered", "a few old retro games to try to", "make you relive those moments", "once again. i'll go now but", "i'll comeback again!"],
                     typeSpeed: 1,
@@ -460,8 +471,6 @@ $('.forward_btn').click(
                 sound8.fade(1, 0, 2000);
                 $('.dog_8').css('transition', '1s')
                 $('.dog_8').css('opacity', '0');
-                $('.forward_btn').removeClass('green_bg');
-                $('.forward_btn').show();
             }, 41000);
         }
 
@@ -479,11 +488,13 @@ $('.forward_btn').click(
                 contentType: 'html'
             });
 
+            setTimeout(function(){
+                $('.forward_btn').show();
+            },5000)
+
             setTimeout(function () {
                 $('.dog_9').css('transition', '1s')
                 $('.dog_9').css('opacity', '0');
-                $('.forward_btn').removeClass('green_bg');
-                $('.forward_btn').show();
             }, 7000);
         }
 
@@ -499,12 +510,13 @@ $('.forward_btn').click(
                 cursorChar: "|",
                 contentType: 'html'
             });
+            setTimeout(function(){
+                $('.forward_btn').show();
+            },6000)
 
             setTimeout(function () {
                 $('.dog_10').css('transition', '1s')
                 $('.dog_10').css('opacity', '0');
-                $('.forward_btn').removeClass('green_bg');
-                $('.forward_btn').show();
                 $('.forward_btn').click(function(){
                     start_slide10_bg();
                 })
@@ -542,10 +554,10 @@ $('.forward_btn').click(
 
             setTimeout(function () {
                 $('#slide10 .end_div').css('opacity', '0');
-            }, 112000)
+            }, 100000)
             setTimeout(function () {
                 $('#slide10 .end_div').css('display', 'none');
-            }, 113000)
+            }, 112000)
         }
     }
 );
