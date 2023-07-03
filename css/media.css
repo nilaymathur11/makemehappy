@@ -303,7 +303,7 @@
         padding-top: 100px;
     }
 
-    .float_box,.welcome_div{
+    .float_box,.welcome_div, .end_div{
         align-items: flex-start;
         padding-top: 150px;
         font-size: 25px;
@@ -312,6 +312,11 @@
 
     .welcome_div{
         padding-top: 250px;
+    }
+
+    .end_div{
+        font-size: 20px;
+        padding-top: 100px;
     }
 
     .heart_cont,

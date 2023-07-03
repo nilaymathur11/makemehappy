@@ -95,6 +95,7 @@ main {
 }
 
 #user_name {
+    text-align: center;
     text-transform: capitalize;
     padding: 10px 20px;
     border: 2px solid rgb(226, 168, 6);
@@ -376,7 +377,7 @@ main {
     margin-right: 10px;
 }
 
-.welcome_div {
+.welcome_div, .end_div {
     height: 100vh;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.8);
@@ -542,16 +543,6 @@ main {
     margin-top: 0px;
 }
 
-
-/* .game_head {
-    font-weight: bold;
-    text-align: center;
-    margin: auto;
-    background-color:  rgb(232, 220, 184);
-    border-radius: 10px;
-    filter: drop-shadow(0px 0px 5px #000);
-} */
-
 .game_head {
     background: rgba(25, 26, 26, 0.6);
     font-weight: bold;
@@ -624,17 +615,6 @@ main {
 
 .game_mob {
     display: none;
-}
-
-.last_slide {
-    background-image: linear-gradient(90deg, #d14f96, #9c538a);
-    top: 20%;
-    line-height: 80px;
-}
-
-.slide_lvl3_end {
-    background-image: url(../images/catalin-pop-noydSJIWMSg-unsplash.jpg);
-    background-position: 10% 10%;
 }
 
 

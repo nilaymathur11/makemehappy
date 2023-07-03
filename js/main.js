@@ -8,11 +8,45 @@ window.addEventListener('resize', () => {
     document.documentElement.style.setProperty('--vh', `${vh}px`);
 });
 
+const sound1 = new Howl({
+    src: ['../audio/main.mp3'],
+    loop: true
+});
+const sound2 = new Howl({
+    src: ['../audio/slide1.mp3'],
+    loop: true
+});
+const sound3 = new Howl({
+    src: ['../audio/slide2.mp3', '../audio/slide3.mp3'],
+    loop: true
+});
+const sound4 = new Howl({
+    src: ['../audio/slide3.mp3'],
+    loop: true
+});
+const sound5 = new Howl({
+    src: ['../audio/slide4.mp3'],
+    loop: true
+});
+const sound6 = new Howl({
+    src: ['../audio/slide5.mp3'],
+    loop: true
+});
+const sound7 = new Howl({
+    src: ['../audio/slide6.mp3'],
+    loop: true
+});
+const sound8 = new Howl({
+    src: ['../audio/slide7.mp3'],
+    loop: true
+});
+
 const dog_txt1 = ['Hello My Friend, Welcome To MMH', 'My Name is Tikki!'];
 var user_name = '';
 $('.slides').hide();
 $('#btn1').attr('disabled', true);
 $('.forward_btn').fadeOut();
+Howler.volume(0.2);
 
 $(document).ready(
     function () {
@@ -46,6 +80,7 @@ $(document).ready(
 
                     }
                     if ((e.key == 'Enter') && (e.target.value != '')) {
+                        sound1.play();
                         $('.name_error').css('display', 'none');
                         user_name = $('#user_name').val();
                         $('.user_name_div').fadeOut();
@@ -54,7 +89,7 @@ $(document).ready(
                         $(".typed-cursor").eq(0).remove();
                         $("#dog_txt1_p2").removeClass('disp_none');
                         $("#dog_txt1_p2").typed({
-                            strings: [`Let's Start ${user_name}!`, "Click on make me happy"],
+                            strings: ["(please adjust your sound level","according to your preference)",`Let's Start ${user_name}!`, "Click on make me happy"],
                             typeSpeed: 10,
                             startDelay: 0,
                             backSpeed: 1,
@@ -68,25 +103,31 @@ $(document).ready(
                 })
             }
             , 6500);
+
+
     }
 );
 
 $('#btn1').click(
     function () {
+        sound1.fade(1, 0, 2000);
+        setTimeout(function () {
+            sound2.play();
+        }, 1500)
         $('#main_overlay').css('animation', 'main_overlay 1s 0s 1 ease-in forwards');
         $('.slides').show();
 
         setTimeout(function () {
-            $('.slide_lvl1 .welcome_div').append(user_name);
-            $('.slide_lvl1 .welcome_div').css('opacity', '1');
+            $('#slide1 .welcome_div').append(user_name);
+            $('#slide1 .welcome_div').css('opacity', '1');
         }, 500);
 
         setTimeout(function () {
-            $('.slide_lvl1 .welcome_div').css('opacity', '0');
-        }, 4000);
+            $('#slide1 .welcome_div').css('opacity', '0');
+        }, 6000);
 
         setTimeout(function () {
-            $('.slide_lvl1 .welcome_div').hide();
+            $('#slide1 .welcome_div').hide();
             $('.dog_2').fadeIn();
             $("#dog_txt2").typed({
                 strings: [`${user_name} your journey`, "of happiness has started!", "click on the red heart"],
@@ -98,7 +139,7 @@ $('#btn1').click(
                 cursorChar: "|",
                 contentType: 'html'
             });
-        }, 5000);
+        }, 7000);
 
         setTimeout(function () {
             $('.float_box1').fadeIn();
@@ -109,7 +150,7 @@ $('#btn1').click(
                     $('.heart_cont').fadeIn();
                 }, 500)
             })
-        }, 12000);
+        }, 14000);
 
         $('.heart_cont_btn').click(function () {
             $('.float_box1').fadeOut();
@@ -140,6 +181,10 @@ $('.forward_btn').click(
         $('.forward_btn').fadeOut();
 
         if ($('#slide2').hasClass('carousel-item-next')) {
+            sound2.fade(1, 0, 2000);
+            setTimeout(function () {
+                sound3.play();
+            }, 1500)
 
             $('.dog_3').fadeIn();
 
@@ -163,7 +208,11 @@ $('.forward_btn').click(
         }
 
         else if ($('#slide3').hasClass('carousel-item-next')) {
-            
+            sound3.fade(1, 0, 2000);
+            setTimeout(function () {
+                sound4.play();
+            }, 1500)
+
             $('.dog_4').fadeIn();
 
             $("#dog_txt4").typed({
@@ -180,7 +229,7 @@ $('.forward_btn').click(
             setTimeout(function () {
                 $('.float_box2').fadeIn();
                 $('.float_box2').css('display', 'flex');
-            }, 5500);
+            }, 5000);
 
             $('.door').click(function () {
                 $('.door').fadeOut();
@@ -209,12 +258,18 @@ $('.forward_btn').click(
                     $('.dog_4').css('opacity', '0');
                     $('.forward_btn').removeClass('blue_bg');
                     $('.forward_btn').show();
-                }, 7000)
+                }, 6500)
             });
         }
 
         else if ($('#slide4').hasClass('carousel-item-next')) {
-            
+
+            sound4.fade(1, 0, 2000);
+            setTimeout(function () {
+                sound5.play();
+            }, 1500)
+
+
             setTimeout(function () {
                 $('#slide4 .welcome_div').css('opacity', '1');
             }, 500);
@@ -245,6 +300,10 @@ $('.forward_btn').click(
         }
 
         else if ($('#slide5').hasClass('carousel-item-next')) {
+            sound5.fade(1, 0, 2000);
+            setTimeout(function () {
+                sound6.play();
+            }, 1500)
 
             $('.dog_6').fadeIn();
             $("#dog_txt6").typed({
@@ -334,6 +393,10 @@ $('.forward_btn').click(
         }
 
         else if ($('#slide6').hasClass('carousel-item-next')) {
+            sound6.fade(1, 0, 2000);
+            setTimeout(function () {
+                sound7.play();
+            }, 2000)
 
             setTimeout(function () {
                 $('#slide6 .welcome_div').append(user_name);
@@ -366,6 +429,10 @@ $('.forward_btn').click(
         }
 
         else if ($('#slide7').hasClass('carousel-item-next')) {
+            sound7.fade(1, 0, 2000);
+            setTimeout(function () {
+                sound8.play();
+            }, 1500)
             setTimeout(function () {
                 $('#slide7 .welcome_div').css('opacity', '1');
             }, 500);
@@ -390,6 +457,7 @@ $('.forward_btn').click(
             }, 7000)
 
             setTimeout(function () {
+                sound8.fade(1, 0, 2000);
                 $('.dog_8').css('transition', '1s')
                 $('.dog_8').css('opacity', '0');
                 $('.forward_btn').removeClass('green_bg');
@@ -398,6 +466,7 @@ $('.forward_btn').click(
         }
 
         else if ($('#slide8').hasClass('carousel-item-next')) {
+
             $('.dog_9').fadeIn();
             $("#dog_txt9").typed({
                 strings: ["this game is one of my favourites", "i hope you will like it too"],
@@ -435,11 +504,48 @@ $('.forward_btn').click(
                 $('.dog_10').css('transition', '1s')
                 $('.dog_10').css('opacity', '0');
                 $('.forward_btn').removeClass('green_bg');
+                $('.forward_btn').show();
+                $('.forward_btn').click(function(){
+                    start_slide10_bg();
+                })
             }, 15000);
         }
 
         else {
             $('.forward_btn').fadeOut();
+            setTimeout(function () {
+                $('#slide10 .welcome_div').css('opacity', '1');
+            }, 500);
+            setTimeout(function () {
+                $('#slide10 .welcome_div').css('opacity', '0');
+                $('.dog_11').fadeIn();
+                $("#dog_txt11").typed({
+                    strings: ["Research has shown that music", "can reduce anxiety, blood pressure, ", "improve sleep quality and mood", "So keep your brain young", `with music ${user_name} `],
+                    typeSpeed: 1,
+                    startDelay: 1000,
+                    backSpeed: 1,
+                    backDelay: 1000,
+                    loop: false,
+                    cursorChar: "|",
+                    contentType: 'html'
+                });
+            }, 4000)
+
+            setTimeout(function () {
+                $('.dog_11').css('transition', '1s')
+                $('.dog_11').css('opacity', '0');
+            }, 20000);
+
+            setTimeout(function () {
+                $('#slide10 .end_div').css('opacity', '1');
+            }, 50000)
+
+            setTimeout(function () {
+                $('#slide10 .end_div').css('opacity', '0');
+            }, 104000)
+            setTimeout(function () {
+                $('#slide10 .end_div').css('display', 'none');
+            }, 112000)
         }
     }
 );
