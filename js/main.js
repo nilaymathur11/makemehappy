@@ -538,14 +538,14 @@ $('.forward_btn').click(
 
             setTimeout(function () {
                 $('#slide10 .end_div').css('opacity', '1');
-            }, 50000)
+            }, 105000)
 
             setTimeout(function () {
                 $('#slide10 .end_div').css('opacity', '0');
             }, 112000)
             setTimeout(function () {
                 $('#slide10 .end_div').css('display', 'none');
-            }, 118000)
+            }, 113000)
         }
     }
 );
