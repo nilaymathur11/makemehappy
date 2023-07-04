@@ -612,7 +612,7 @@ main {
 }
 
 .embedsocial-collect-iframe iframe{
-    height: 1100px;
+    height: 1100px !important;
 }
 
 
