@@ -551,7 +551,7 @@ $('.forward_btn').click(
 
             setTimeout(function () {
                 $('#slide10 .end_div').css('opacity', '1');
-            }, 105000)
+            }, 90000)
 
             setTimeout(function () {
                 $('#slide10 .end_div').css('opacity', '0');
@@ -559,7 +559,7 @@ $('.forward_btn').click(
             }, 100000)
             setTimeout(function () {
                 $('#slide10 .end_div').css('display', 'none');
-            }, 112000)
+            }, 111000)
         }
     }
 );
