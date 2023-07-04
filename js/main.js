@@ -545,6 +545,7 @@ $('.forward_btn').click(
             }, 4000)
 
             setTimeout(function () {
+                $('#slide10 .welcome_div').css('display', 'none');
                 $('.dog_11').css('transition', '1s')
                 $('.dog_11').css('opacity', '0');
             }, 20000);
