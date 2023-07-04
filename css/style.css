@@ -611,6 +611,10 @@ main {
     display: none;
 }
 
+.embedsocial-collect-iframe iframe{
+    height: 1100px;
+}
+
 
 /* All Animations  */
 

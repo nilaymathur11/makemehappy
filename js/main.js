@@ -533,7 +533,7 @@ $('.forward_btn').click(
                 $('#slide10 .welcome_div').css('opacity', '0');
                 $('.dog_11').fadeIn();
                 $("#dog_txt11").typed({
-                    strings: ["Research has shown that music", "can reduce anxiety, blood pressure,", "improve sleep quality and mood", "So keep your brain young", `with music ${user_name}!`],
+                    strings: ["music can reduce anxiety, blood pressure,", "improve sleep quality and mood", "So keep your brain young", `with music ${user_name}!`],
                     typeSpeed: 1,
                     startDelay: 1000,
                     backSpeed: 1,
@@ -555,16 +555,12 @@ $('.forward_btn').click(
 
             setTimeout(function () {
                 $('#slide10_bg').remove();
+                $('#slide10').css('overflow-x','hidden');
                 $('#slide10').css('overflow-y','auto');
                 $('.review_form').removeClass('d-none');
-                $('.es-free-link').remove();
-                $('.es-form-block').css('padding','0px');
-                $('#slide10 .end_div').css('opacity', '0');
+                $('#slide10 .end_div').remove();
                 $('.logo_slide').fadeIn();
             }, 100000)
-            setTimeout(function () {
-                $('#slide10 .end_div').css('display', 'none');
-            }, 111000)
         }
     }
 );
