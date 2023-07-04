@@ -33,24 +33,24 @@ main {
     overflow: hidden;
 }
 
-.dog {
+.cat {
     position: absolute;
     display: flex;
     height: 160px;
     width: 400px;
     bottom: -100%;
     left: 15%;
-    animation: dog_move2 1s forwards;
+    animation: cat_move2 1s forwards;
     z-index: 999;
 }
 
-.dog_sprite {
-    width: 150px;
-    height: 150px;
+.cat_sprite {
+    width: 170px;
+    height: 170px;
     filter: drop-shadow(0px 0px 5px #000);
 }
 
-.dog_name {
+.cat_name {
     font-weight: bold;
     background-color: orange;
     font-size: 15px;
@@ -63,12 +63,12 @@ main {
     box-shadow: 0px 0px 4px 2px #000;
 }
 
-.dog_sprite img {
+.cat_sprite img {
     width: 100%;
     height: 100%;
 }
 
-.dog_txt {
+.cat_txt {
     text-transform: capitalize;
     font-weight: bold;
     font-size: 17px;
@@ -121,13 +121,13 @@ main {
     outline: none;
 }
 
-.dog_1 {
+.cat_1 {
     bottom: -100%;
     left: 35%;
-    animation: dog_move1 1s forwards;
+    animation: cat_move1 1s forwards;
 }
 
-.dog_1 .dog_txt{
+.cat_1 .cat_txt{
     min-width: unset;
     width: 350px;
 }
@@ -411,6 +411,7 @@ main {
     cursor: pointer;
     font-size: 280px;
     color: rgb(222, 64, 64);
+    transition: 1s;
 }
 
 .heart_cont,
@@ -682,8 +683,8 @@ main {
     }
 }
 
-/* Dog Animations  */
-@keyframes dog_move2 {
+/* cat Animations  */
+@keyframes cat_move2 {
     from {
         bottom: -100%;
     }
@@ -693,7 +694,7 @@ main {
     }
 }
 
-@keyframes dog_move1 {
+@keyframes cat_move1 {
     from {
         bottom: -100%;
     }

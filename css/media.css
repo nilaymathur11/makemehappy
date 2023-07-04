@@ -80,12 +80,12 @@
         font-size: 22px;
     }
 
-    .dog_sprite {
-        width: 120px;
-        height: 120px;
+    .cat_sprite {
+        width: 135px;
+        height: 135px;
     }
 
-    .dog_txt {
+    .cat_txt {
         min-width: 270px;
         font-size: 14px;
         padding: 0px 5px;
@@ -94,12 +94,12 @@
         height: 50px;
     }
 
-    .dog_1 .dog_txt {
+    .cat_1 .cat_txt {
         min-width: unset;
         width: 270px;
     }
 
-    .dog_txt input {
+    .cat_txt input {
         position: absolute;
         bottom: -70%;
         left: -20%;
@@ -107,17 +107,17 @@
         height: 40px;
     }
 
-    .dog_name {
+    .cat_name {
         top: 0%;
         left: 30%;
     }
 
-    .dog {
+    .cat {
         left: -1%;
-        animation: dog_move 1s forwards;
+        animation: cat_move 1s forwards;
     }
 
-    @keyframes dog_move {
+    @keyframes cat_move {
         from {
             bottom: -100%;
         }

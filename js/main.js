@@ -41,7 +41,7 @@ const sound8 = new Howl({
     loop: true
 });
 
-const dog_txt1 = ['Hello My Friend, Welcome To MMH', 'My Name is Tikki!'];
+const cat_txt1 = ['Hello My Friend, Welcome To MMH', 'My Name is Tikki!'];
 var user_name = '';
 $('.slides').hide();
 $('#btn1').attr('disabled', true);
@@ -51,7 +51,7 @@ Howler.volume(0.2);
 
 $(document).ready(
     function () {
-        $("#dog_txt1").typed({
+        $("#cat_txt1").typed({
             strings: ["Greetings, my friend", "My Name is Tikki", "May I know your name ?"],
             typeSpeed: 1,
             startDelay: 1000,
@@ -65,7 +65,7 @@ $(document).ready(
         setTimeout(
             function () {
                 $('#user_name').val('');
-                $('.dog_1 .dog_sprite img').attr('src', "images/dog sprites/Asset 7.svg");
+                $('.cat_1 .cat_sprite img').attr('src', "images/cat sprites/Asset3.webp");
                 $('.user_name_div').css('opacity', '1');
                 $('#user_name').select();
                 $('#user_name').keyup(function (e) {
@@ -86,10 +86,10 @@ $(document).ready(
                         user_name = $('#user_name').val();
                         $('.user_name_div').fadeOut();
                         $('#user_name').addClass('disp_none');
-                        $("#dog_txt1").remove();
+                        $("#cat_txt1").remove();
                         $(".typed-cursor").eq(0).remove();
-                        $("#dog_txt1_p2").removeClass('disp_none');
-                        $("#dog_txt1_p2").typed({
+                        $("#cat_txt1_p2").removeClass('disp_none');
+                        $("#cat_txt1_p2").typed({
                             strings: ["(please adjust your sound level","according to your preference)",`Let's Start ${user_name}!`, "Click on make me happy"],
                             typeSpeed: 10,
                             startDelay: 0,
@@ -129,8 +129,8 @@ $('#btn1').click(
 
         setTimeout(function () {
             $('#slide1 .welcome_div').hide();
-            $('.dog_2').fadeIn();
-            $("#dog_txt2").typed({
+            $('.cat_2').fadeIn();
+            $("#cat_txt2").typed({
                 strings: [`${user_name} your journey`, "of happiness has started!", "click on the red heart"],
                 typeSpeed: 1,
                 startDelay: 1000,
@@ -146,20 +146,23 @@ $('#btn1').click(
             $('.float_box1').fadeIn();
             $('.float_box1').css('display', 'flex');
             $('.heart').click(function () {
-                $('.heart').fadeOut();
+                $('.heart').css('transform','scale(2,2)');
+                setTimeout(function(){
+                    $('.heart').fadeOut();
+                },1000)
                 setTimeout(function () {
                     $('.heart_cont').fadeIn();
-                }, 500)
+                }, 1500)
             })
         }, 14000);
 
         $('.heart_cont_btn').click(function () {
             $('.float_box1').fadeOut();
-            $("#dog_txt2").next().remove();
-            $("#dog_txt2").remove();
-            $("#dog_txt2_p2").fadeIn()
+            $("#cat_txt2").next().remove();
+            $("#cat_txt2").remove();
+            $("#cat_txt2_p2").fadeIn()
             $('.forward_btn').show();
-            $("#dog_txt2_p2").typed({
+            $("#cat_txt2_p2").typed({
                 strings: ["you can now just watch", "this beautiful animation", "or click on next button"],
                 typeSpeed: 1,
                 startDelay: 100,
@@ -170,8 +173,8 @@ $('#btn1').click(
                 contentType: 'html'
             });
             setTimeout(function () {
-                $('.dog_2').css('transition', '1s')
-                $('.dog_2').css('opacity', '0');
+                $('.cat_2').css('transition', '1s')
+                $('.cat_2').css('opacity', '0');
             }, 7000)
         });
     }
@@ -187,9 +190,9 @@ $('.forward_btn').click(
                 sound3.play();
             }, 1500)
 
-            $('.dog_3').fadeIn();
+            $('.cat_3').fadeIn();
 
-            $("#dog_txt3").typed({
+            $("#cat_txt3").typed({
                 strings: [`time has stopped ${user_name}`, "just focus on this", "soothing flower animation", "alongwith peaceful music"],
                 typeSpeed: 1,
                 startDelay: 1000,
@@ -206,8 +209,8 @@ $('.forward_btn').click(
             },5000)
 
             setTimeout(function () {
-                $('.dog_3').css('transition', '1s')
-                $('.dog_3').css('opacity', '0');
+                $('.cat_3').css('transition', '1s')
+                $('.cat_3').css('opacity', '0');
             }, 12000);
         }
 
@@ -217,9 +220,9 @@ $('.forward_btn').click(
                 sound4.play();
             }, 1500)
 
-            $('.dog_4').fadeIn();
+            $('.cat_4').fadeIn();
 
-            $("#dog_txt4").typed({
+            $("#cat_txt4").typed({
                 strings: [`I'm here for you ${user_name}`, "click on the door you see"],
                 typeSpeed: 1,
                 startDelay: 1000,
@@ -236,20 +239,23 @@ $('.forward_btn').click(
             }, 5000);
 
             $('.door').click(function () {
-                $('.door').fadeOut();
+                $('.door').css('transform','scale(2,2)');
+                setTimeout(function(){
+                    $('.door').fadeOut();
+                },1000)
                 setTimeout(function () {
                     $('.door_cont').fadeIn();
-                }, 500)
+                }, 1500)
             });
 
             $('.door_cont_btn').click(function () {
                 $('.float_box2').fadeOut();
-                $("#dog_txt4").next().remove();
-                $("#dog_txt4").remove();
-                $("#dog_txt4_p2").fadeIn();
+                $("#cat_txt4").next().remove();
+                $("#cat_txt4").remove();
+                $("#cat_txt4_p2").fadeIn();
                 $('.forward_btn').removeClass('blue_bg');
                 $('.forward_btn').show();
-                $("#dog_txt4_p2").typed({
+                $("#cat_txt4_p2").typed({
                     strings: ["you can now just watch", "this beautiful animation", "or click on next button"],
                     typeSpeed: 1,
                     startDelay: 100,
@@ -260,8 +266,8 @@ $('.forward_btn').click(
                     contentType: 'html'
                 });
                 setTimeout(function () {
-                    $('.dog_4').css('transition', '1s')
-                    $('.dog_4').css('opacity', '0');
+                    $('.cat_4').css('transition', '1s')
+                    $('.cat_4').css('opacity', '0');
                 }, 6500)
             });
         }
@@ -280,8 +286,8 @@ $('.forward_btn').click(
 
             setTimeout(function () {
                 $('#slide4 .welcome_div').css('opacity', '0');
-                $('.dog_5').fadeIn();
-                $("#dog_txt5").typed({
+                $('.cat_5').fadeIn();
+                $("#cat_txt5").typed({
                     strings: ["what you are seeing", `on the screen ${user_name} is`, "called a NOVA", "you can drag and zoom", "this NOVA even after I go"],
                     typeSpeed: 1,
                     startDelay: 1000,
@@ -299,8 +305,8 @@ $('.forward_btn').click(
 
             setTimeout(function () {
                 $('#slide4 .welcome_div').hide();
-                $('.dog_5').css('transition', '1s')
-                $('.dog_5').css('opacity', '0');
+                $('.cat_5').css('transition', '1s')
+                $('.cat_5').css('opacity', '0');
                 $('.slide4_bg').css('position', 'unset');
             }, 18000);
         }
@@ -311,8 +317,8 @@ $('.forward_btn').click(
                 sound6.play();
             }, 1500)
 
-            $('.dog_6').fadeIn();
-            $("#dog_txt6").typed({
+            $('.cat_6').fadeIn();
+            $("#cat_txt6").typed({
                 strings: ["writing down our thoughts", "helps our mind alot", "gives relief from stress, anxiety,", "suffering and so here i'm", "giving you a lantern on which", "you can write down your", "thoughts and feel relieved."],
                 typeSpeed: 1,
                 startDelay: 1000,
@@ -356,7 +362,7 @@ $('.forward_btn').click(
 
             $('.lantern_opt1').click(function () {
                 $('.lantern_ask').fadeOut();
-                $('#slide5 .slide_lvl .dog').append(
+                $('#slide5 .slide_lvl .cat').append(
                     `
                         <div class="lantern_user opacity-100">
                         <img src="images/lantern.svg" alt=""> <br>
@@ -370,10 +376,10 @@ $('.forward_btn').click(
 
             $('.lantern_opt2').click(function () {
                 $('.lantern_ask').fadeOut();
-                $("#dog_txt6").next().remove();
-                $("#dog_txt6").remove();
-                $("#dog_txt6_p2").fadeIn();
-                $("#dog_txt6_p2").typed({
+                $("#cat_txt6").next().remove();
+                $("#cat_txt6").remove();
+                $("#cat_txt6_p2").fadeIn();
+                $("#cat_txt6_p2").typed({
                     strings: ["you can sit here peacefully", "or click on next button"],
                     typeSpeed: 1,
                     startDelay: 1000,
@@ -384,8 +390,8 @@ $('.forward_btn').click(
                     contentType: 'html'
                 });
                 setTimeout(function () {
-                    $('.dog_6').css('transition', '1s')
-                    $('.dog_6').css('opacity', '0');
+                    $('.cat_6').css('transition', '1s')
+                    $('.cat_6').css('opacity', '0');
                 }, 6000);
             })
 
@@ -413,8 +419,8 @@ $('.forward_btn').click(
 
             setTimeout(function () {
                 $('#slide6 .welcome_div').css('opacity', '0');
-                $('.dog_7').fadeIn();
-                $("#dog_txt7").typed({
+                $('.cat_7').fadeIn();
+                $("#cat_txt7").typed({
                     strings: [`isn't nature so peaceful ${user_name}?`, "I just thought of a poem", "River's tranquil embrace,", "Gently winding through time.", "Whispers of ancient tales,", "Flowing secrets untold.", "Nature's endless symphony,", "Eternal current's embrace.", `you can close your eyes ${user_name}`, "and feel the water flowing"],
                     typeSpeed: 1,
                     startDelay: 1000,
@@ -433,8 +439,8 @@ $('.forward_btn').click(
 
             setTimeout(function () {
                 $('#slide6 .welcome_div').hide();
-                $('.dog_7').css('transition', '1s')
-                $('.dog_7').css('opacity', '0');
+                $('.cat_7').css('transition', '1s')
+                $('.cat_7').css('opacity', '0');
             }, 36000);
         }
 
@@ -449,10 +455,10 @@ $('.forward_btn').click(
 
             setTimeout(function () {
                 $('#slide7 .welcome_div').css('opacity', '0');
-                $('.dog_8').fadeIn();
+                $('.cat_8').fadeIn();
                 $('.forward_btn').removeClass('green_bg');
                 $('.forward_btn').show();
-                $("#dog_txt8").typed({
+                $("#cat_txt8").typed({
                     strings: [`do you remember the time ${user_name}`, "when you used to play a lot", "either outdoor or indoor games", "wasn't life fun till then?", "i want you to experience that", "feeling once again so i've gathered", "a few old retro games to try to", "make you relive those moments", "once again. i'll go now but", "i'll comeback again!"],
                     typeSpeed: 1,
                     startDelay: 1000,
@@ -470,15 +476,15 @@ $('.forward_btn').click(
             }, 7000)
 
             setTimeout(function () {
-                $('.dog_8').css('transition', '1s')
-                $('.dog_8').css('opacity', '0');
+                $('.cat_8').css('transition', '1s')
+                $('.cat_8').css('opacity', '0');
             }, 41000);
         }
 
         else if ($('#slide8').hasClass('carousel-item-next')) {
             sound8.fade(1, 0, 2000);
-            $('.dog_9').fadeIn();
-            $("#dog_txt9").typed({
+            $('.cat_9').fadeIn();
+            $("#cat_txt9").typed({
                 strings: ["this game is one of my favourites", "i hope you will like it too"],
                 typeSpeed: 1,
                 startDelay: 1000,
@@ -494,14 +500,14 @@ $('.forward_btn').click(
             },5000)
 
             setTimeout(function () {
-                $('.dog_9').css('transition', '1s')
-                $('.dog_9').css('opacity', '0');
+                $('.cat_9').css('transition', '1s')
+                $('.cat_9').css('opacity', '0');
             }, 7000);
         }
 
         else if ($('#slide9').hasClass('carousel-item-next')) {
-            $('.dog_10').fadeIn();
-            $("#dog_txt10").typed({
+            $('.cat_10').fadeIn();
+            $("#cat_txt10").typed({
                 strings: ["i hope you are enjoying", "my selection of games", "if not i'm really sorry", "suggest me some good games", "and i'll try to add them"],
                 typeSpeed: 1,
                 startDelay: 1000,
@@ -519,8 +525,8 @@ $('.forward_btn').click(
             },4000)
 
             setTimeout(function () {
-                $('.dog_10').css('transition', '1s')
-                $('.dog_10').css('opacity', '0');
+                $('.cat_10').css('transition', '1s')
+                $('.cat_10').css('opacity', '0');
             }, 15000);
         }
 
@@ -531,9 +537,9 @@ $('.forward_btn').click(
             }, 500);
             setTimeout(function () {
                 $('#slide10 .welcome_div').css('opacity', '0');
-                $('.dog_11').fadeIn();
-                $("#dog_txt11").typed({
-                    strings: ["music can reduce anxiety, blood pressure,", "improve sleep quality and mood", "So keep your brain young", `with music ${user_name}!`],
+                $('.cat_11').fadeIn();
+                $("#cat_txt11").typed({
+                    strings: ["music can reduce anxiety,", "improve sleep quality and mood", "So keep your brain young", `with music ${user_name}!`],
                     typeSpeed: 1,
                     startDelay: 1000,
                     backSpeed: 1,
@@ -542,12 +548,12 @@ $('.forward_btn').click(
                     cursorChar: "|",
                     contentType: 'html'
                 });
-            }, 4000)
+            }, 3000)
 
             setTimeout(function () {
                 $('#slide10 .welcome_div').css('display', 'none');
-                $('.dog_11').css('transition', '1s')
-                $('.dog_11').css('opacity', '0');
+                $('.cat_11').css('transition', '1s')
+                $('.cat_11').css('opacity', '0');
             }, 20000);
 
             setTimeout(function () {
