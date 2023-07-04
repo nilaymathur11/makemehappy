@@ -46,6 +46,7 @@ var user_name = '';
 $('.slides').hide();
 $('#btn1').attr('disabled', true);
 $('.forward_btn').fadeOut();
+$('.logo_slide').fadeOut();
 Howler.volume(0.2);
 
 $(document).ready(
@@ -157,6 +158,7 @@ $('#btn1').click(
             $("#dog_txt2").next().remove();
             $("#dog_txt2").remove();
             $("#dog_txt2_p2").fadeIn()
+            $('.forward_btn').show();
             $("#dog_txt2_p2").typed({
                 strings: ["you can now just watch", "this beautiful animation", "or click on next button"],
                 typeSpeed: 1,
@@ -170,7 +172,6 @@ $('#btn1').click(
             setTimeout(function () {
                 $('.dog_2').css('transition', '1s')
                 $('.dog_2').css('opacity', '0');
-                $('.forward_btn').show();
             }, 7000)
         });
     }
@@ -202,7 +203,7 @@ $('.forward_btn').click(
             setTimeout(function(){
                 $('.forward_btn').show();
                 $('.forward_btn').addClass('blue_bg');
-            },6000)
+            },5000)
 
             setTimeout(function () {
                 $('.dog_3').css('transition', '1s')
@@ -246,6 +247,8 @@ $('.forward_btn').click(
                 $("#dog_txt4").next().remove();
                 $("#dog_txt4").remove();
                 $("#dog_txt4_p2").fadeIn();
+                $('.forward_btn').removeClass('blue_bg');
+                $('.forward_btn').show();
                 $("#dog_txt4_p2").typed({
                     strings: ["you can now just watch", "this beautiful animation", "or click on next button"],
                     typeSpeed: 1,
@@ -259,8 +262,6 @@ $('.forward_btn').click(
                 setTimeout(function () {
                     $('.dog_4').css('transition', '1s')
                     $('.dog_4').css('opacity', '0');
-                    $('.forward_btn').removeClass('blue_bg');
-                    $('.forward_btn').show();
                 }, 6500)
             });
         }
@@ -294,7 +295,7 @@ $('.forward_btn').click(
             setTimeout(function(){
                 $('.forward_btn').removeClass('blue_bg');
                 $('.forward_btn').show();
-            },6000)
+            },5000)
 
             setTimeout(function () {
                 $('#slide4 .welcome_div').hide();
@@ -324,7 +325,7 @@ $('.forward_btn').click(
             setTimeout(function(){
                 $('.forward_btn').addClass('blue_bg');
                 $('.forward_btn').show();
-            },6000)
+            },5000)
             setTimeout(function () {
                 $('.lantern_user textarea').val('');
                 $('.lantern_user').css('opacity', '1');
@@ -428,7 +429,7 @@ $('.forward_btn').click(
                 $('.forward_btn').removeClass('blue_bg');
                 $('.forward_btn').addClass('green_bg');
                 $('.forward_btn').show();
-            },6000)
+            },5000)
 
             setTimeout(function () {
                 $('#slide6 .welcome_div').hide();
@@ -465,17 +466,17 @@ $('.forward_btn').click(
 
             setTimeout(function () {
                 $('#slide7 .welcome_div').hide();
+                sound8.fade(1, 0, 2000);
             }, 7000)
 
             setTimeout(function () {
-                sound8.fade(1, 0, 2000);
                 $('.dog_8').css('transition', '1s')
                 $('.dog_8').css('opacity', '0');
             }, 41000);
         }
 
         else if ($('#slide8').hasClass('carousel-item-next')) {
-
+            sound8.fade(1, 0, 2000);
             $('.dog_9').fadeIn();
             $("#dog_txt9").typed({
                 strings: ["this game is one of my favourites", "i hope you will like it too"],
@@ -512,14 +513,14 @@ $('.forward_btn').click(
             });
             setTimeout(function(){
                 $('.forward_btn').show();
-            },6000)
+                $('.forward_btn').click(function(){
+                    start_slide10_bg();
+                })
+            },4000)
 
             setTimeout(function () {
                 $('.dog_10').css('transition', '1s')
                 $('.dog_10').css('opacity', '0');
-                $('.forward_btn').click(function(){
-                    start_slide10_bg();
-                })
             }, 15000);
         }
 
@@ -554,6 +555,7 @@ $('.forward_btn').click(
 
             setTimeout(function () {
                 $('#slide10 .end_div').css('opacity', '0');
+                $('.logo_slide').fadeIn();
             }, 100000)
             setTimeout(function () {
                 $('#slide10 .end_div').css('display', 'none');
