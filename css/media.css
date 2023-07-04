@@ -127,9 +127,7 @@
         }
     }
 
-    .forward_btn,
-    .reverse_btn {
-        font-size: 45px;
+    .forward_btn{
         width: 50px;
         height: 50px;
     }
@@ -298,6 +296,15 @@
 }
 
 @media only screen and (max-width: 767px) {
+    .carousel-control-next-icon{
+        width: 1rem;
+        height: 1rem;
+    }
+
+    .forward_btn{
+        width: 35px;
+        height: 35px;
+    }
 
     .name_error,.zoom_error{
         left: 10%;

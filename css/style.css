@@ -16,12 +16,6 @@ button{
     color: black;
 }
 
-body{
-    zoom: 100%;
-    zoom: 1;
-    transform: scale(1,1);
-}
-
 main {
     width: 100%;
     font-family: 'Merienda', cursive;
