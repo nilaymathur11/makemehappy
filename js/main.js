@@ -69,16 +69,19 @@ $(document).ready(
                 $('.user_name_div').css('opacity', '1');
                 $('#user_name').select();
                 $('#user_name').keyup(function (e) {
-                    if ($('#user_name').val().length <= 10) {
-                        user_name = $('#user_name').val();
-                    }
-                    if ($('#user_name').val().length > 10) {
+                    if ($('#user_name').val().length >= 10) {
                         $('#user_name').val(user_name);
                         $('.name_error').css({
                             'opacity': '1',
                             'bottom': '40%'
                         })
 
+                    }else{
+                        $('.name_error').css({
+                            'opacity': '1',
+                            'bottom': '-100%'
+                        })
+                        user_name = $('#user_name').val();
                     }
                     if ((e.key == 'Enter') && (e.target.value != '')) {
                         sound1.play();

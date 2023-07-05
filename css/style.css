@@ -115,6 +115,8 @@ main {
     left: 10%;
     opacity: 0;
     transition: 0.5s;
+    line-height: 40px;
+    left: 44%;
 }
 
 #user_name:focus {
