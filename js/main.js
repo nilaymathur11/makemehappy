@@ -8,6 +8,8 @@ window.addEventListener('resize', () => {
     document.documentElement.style.setProperty('--vh', `${vh}px`);
 });
 
+var winWidth = window.innerWidth;
+
 const sound1 = new Howl({
     src: ['../audio/main.mp3'],
     loop: true
@@ -47,7 +49,7 @@ $('.slides').hide();
 $('#btn1').attr('disabled', true);
 $('.forward_btn').fadeOut();
 $('.logo_slide').fadeOut();
-Howler.volume(0.2);
+Howler.volume(0.5);
 
 $(document).ready(
     function () {
@@ -73,7 +75,7 @@ $(document).ready(
                         $('#user_name').val(user_name);
                         $('.name_error').css({
                             'opacity': '1',
-                            'bottom': '40%'
+                            'bottom': '41%'
                         })
 
                     }else{
