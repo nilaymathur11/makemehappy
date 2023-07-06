@@ -19,6 +19,7 @@ button{
 main {
     width: 100%;
     font-family: 'Merienda', cursive;
+    display: none;
 }
 
 #main_overlay {
@@ -344,6 +345,10 @@ main {
 
 .blue_bg {
     background-image: linear-gradient(315deg, #6daddb 0%, #313131 74%);
+}
+
+.slides{
+    display: none;
 }
 
 .slide_lvl {

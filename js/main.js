@@ -48,7 +48,6 @@ const sound8 = new Howl({
 
 const cat_txt1 = ['Hello My Friend, Welcome To MMH', 'My Name is Tikki!'];
 var user_name = '';
-$('.slides').hide();
 $('#btn1').attr('disabled', true);
 $('.forward_btn').fadeOut();
 $('.logo_slide').fadeOut();
@@ -56,6 +55,7 @@ Howler.volume(0.5);
 
 $(document).ready(
     function () {
+        $('main').css('display','unset');
         $("#cat_txt1").typed({
             strings: ["Greetings, my friend", "My Name is Tikki", "May I know your name ?"],
             typeSpeed: 1,
@@ -119,12 +119,12 @@ $(document).ready(
 
 $('#btn1').click(
     function () {
+        $('.slides').css('display','unset');
         sound1.fade(1, 0, 2000);
         setTimeout(function () {
             sound2.play();
         }, 1500)
         $('#main_overlay').css('animation', 'main_overlay 1s 0s 1 ease-in forwards');
-        $('.slides').show();
 
         setTimeout(function () {
             $('#slide1 .welcome_div').append(user_name);
