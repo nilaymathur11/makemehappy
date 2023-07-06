@@ -8,6 +8,9 @@ window.addEventListener('resize', () => {
     document.documentElement.style.setProperty('--vh', `${vh}px`);
 });
 
+const games_pc = ['https://www.miniplay.com/embed/super-mario-bros','https://www.miniplay.com/embed/super-bomberman','https://www.miniplay.com/embed/space-adventure-pinball'];
+const games_mob = ['https://www.miniplay.com/game/super-mario-bros/play','https://www.miniplay.com/game/super-bomberman/play','https://www.miniplay.com/embed/space-adventure-pinball'];
+
 var winWidth = window.innerWidth;
 
 const sound1 = new Howl({
@@ -451,6 +454,8 @@ $('.forward_btn').click(
 
         else if ($('#slide7').hasClass('carousel-item-next')) {
             sound7.fade(1, 0, 2000);
+            $('.game_pc iframe').eq(0).attr('src',games_pc[0]);
+            $('.game_mob iframe').eq(0).attr('src',games_mob[0]);
             setTimeout(function () {
                 sound8.play();
             }, 1500)
@@ -488,6 +493,9 @@ $('.forward_btn').click(
 
         else if ($('#slide8').hasClass('carousel-item-next')) {
             sound8.fade(1, 0, 2000);
+            $('.game_wrapper').eq(0).remove();
+            $('.game_pc iframe').eq(0).attr('src',games_pc[1]);
+            $('.game_mob iframe').eq(0).attr('src',games_mob[1]);
             $('.cat_9').fadeIn();
             $("#cat_txt9").typed({
                 strings: ["this game is one of my favourites", "i hope you will like it too"],
@@ -511,6 +519,9 @@ $('.forward_btn').click(
         }
 
         else if ($('#slide9').hasClass('carousel-item-next')) {
+            $('.game_wrapper').eq(0).remove();
+            $('.game_pc iframe').eq(0).attr('src',games_pc[2]);
+            $('.game_mob iframe').eq(0).attr('src',games_mob[2]);
             $('.cat_10').fadeIn();
             $("#cat_txt10").typed({
                 strings: ["i hope you are enjoying", "my selection of games", "if not i'm really sorry", "suggest me some good games", "and i'll try to add them"],
@@ -536,6 +547,7 @@ $('.forward_btn').click(
         }
 
         else {
+            $('.game_wrapper').eq(0).remove();
             $('.forward_btn').fadeOut();
             setTimeout(function () {
                 $('#slide10 .welcome_div').css('opacity', '1');
@@ -559,7 +571,7 @@ $('.forward_btn').click(
                 $('#slide10 .welcome_div').css('display', 'none');
                 $('.cat_11').css('transition', '1s')
                 $('.cat_11').css('opacity', '0');
-            }, 20000);
+            }, 16000);
 
             setTimeout(function () {
                 $('#slide10 .end_div').css('opacity', '1');
