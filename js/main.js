@@ -66,9 +66,9 @@ $(document).ready(
             cursorChar: "|",
             contentType: 'html'
         });
-
-        setTimeout(
-            function () {
+        var check_tikki = setInterval(function(){
+            if($("#cat_txt1").html() == 'May I know your name ?'){
+                clearInterval(check_tikki);
                 $('#user_name').val('');
                 $('.cat_1 .cat_sprite img').attr('src', "images/cat sprites/Asset3.webp");
                 $('.user_name_div').css('opacity', '1');
@@ -111,9 +111,7 @@ $(document).ready(
                     }
                 })
             }
-            , 6500);
-
-
+        },100)
     }
 );
 
