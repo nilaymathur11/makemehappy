@@ -55,7 +55,7 @@ Howler.volume(0.5);
 
 $(document).ready(
     function () {
-        $('main').css('display','unset');
+        $('#main_overlay').css('display','unset');
         $("#cat_txt1").typed({
             strings: ["Greetings, my friend", "My Name is Tikki", "May I know your name ?"],
             typeSpeed: 1,
@@ -223,6 +223,7 @@ $('.forward_btn').click(
         }
 
         else if ($('#slide3').hasClass('carousel-item-next')) {
+            start_slide3_bg();
             sound3.fade(1, 0, 2000);
             setTimeout(function () {
                 sound4.play();
@@ -281,7 +282,6 @@ $('.forward_btn').click(
         }
 
         else if ($('#slide4').hasClass('carousel-item-next')) {
-
             sound4.fade(1, 0, 2000);
             setTimeout(function () {
                 sound5.play();

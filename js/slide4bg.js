@@ -1,8 +1,6 @@
 import * as THREE from "https://cdn.skypack.dev/three@0.136.0";
 import { OrbitControls } from "https://cdn.skypack.dev/three@0.136.0/examples/jsm/controls/OrbitControls"
 
-// Slide 4 Animation
-
 var bg = document.querySelector('.slide4_bg');
 let scene = new THREE.Scene();
 scene.background = new THREE.Color(0x160016);
