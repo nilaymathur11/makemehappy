@@ -7,7 +7,6 @@ window.addEventListener('resize', () => {
     var vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
 });
-
 var winWidth = window.innerWidth;
 
 const sound1 = new Howl({
@@ -19,7 +18,7 @@ const sound2 = new Howl({
     loop: true
 });
 const sound3 = new Howl({
-    src: ['../audio/slide2.mp3', '../audio/slide3.mp3'],
+    src: ['../audio/slide2.mp3'],
     loop: true
 });
 const sound4 = new Howl({
