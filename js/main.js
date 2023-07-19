@@ -69,6 +69,7 @@ $(document).ready(
         var check_tikki = setInterval(function(){
             if($("#cat_txt1").html() == 'May I know your name ?'){
                 clearInterval(check_tikki);
+                $('#slide1 iframe').attr('src','https://www.youtube.com/embed/cHlioeh1WKA?autoplay=1&mute=1&playsinline=1&controls=0');
                 $('#user_name').val('');
                 $('.cat_1 .cat_sprite img').attr('src', "images/cat sprites/Asset3.webp");
                 $('.user_name_div').css('opacity', '1');
@@ -90,7 +91,6 @@ $(document).ready(
                     }
                     if ((e.key == 'Enter') && (e.target.value != '')) {
                         sound1.play();
-                        $('#slide1 iframe').attr('src','https://www.youtube.com/embed/cHlioeh1WKA?start=12&autoplay=1&mute=1&playsinline=1&controls=0');
                         $('.name_error').css('display', 'none');
                         user_name = $('#user_name').val();
                         $('.user_name_div').fadeOut();
@@ -320,6 +320,7 @@ $('.forward_btn').click(
         }
 
         else if ($('#slide5').hasClass('carousel-item-next')) {
+            $('#slide6 iframe').attr('src','https://www.youtube.com/embed/RzVvThhjAKw?autoplay=1&mute=1&playsinline=1&controls=0');
             sound5.fade(1, 0, 2000);
             setTimeout(function () {
                 sound6.play();
@@ -415,7 +416,6 @@ $('.forward_btn').click(
         }
 
         else if ($('#slide6').hasClass('carousel-item-next')) {
-            $('#slide6 iframe').attr('src','https://www.youtube.com/embed/RzVvThhjAKw?start=12&autoplay=1&mute=1&playsinline=1&controls=0');
             sound6.fade(1, 0, 2000);
             setTimeout(function () {
                 sound7.play();
@@ -493,6 +493,7 @@ $('.forward_btn').click(
         }
 
         else if ($('#slide8').hasClass('carousel-item-next')) {
+            $('#slide6 iframe').remove();
             sound8.fade(1, 0, 2000);
             $('.game_wrapper').eq(0).remove();
             $('.game_pc iframe').eq(0).attr('src',games_pc[1]);
