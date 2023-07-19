@@ -8,8 +8,8 @@ window.addEventListener('resize', () => {
     document.documentElement.style.setProperty('--vh', `${vh}px`);
 });
 
-const games_pc = ['https://www.miniplay.com/embed/super-mario-bros','https://www.miniplay.com/embed/super-bomberman','https://www.miniplay.com/embed/space-adventure-pinball'];
-const games_mob = ['https://www.miniplay.com/game/super-mario-bros/play','https://www.miniplay.com/game/super-bomberman/play','https://www.miniplay.com/embed/space-adventure-pinball'];
+const games_pc = ['https://www.miniplay.com/embed/super-mario-bros', 'https://www.miniplay.com/embed/super-bomberman', 'https://www.miniplay.com/embed/space-adventure-pinball'];
+const games_mob = ['https://www.miniplay.com/game/super-mario-bros/play', 'https://www.miniplay.com/game/super-bomberman/play', 'https://www.miniplay.com/embed/space-adventure-pinball'];
 
 var winWidth = window.innerWidth;
 
@@ -45,6 +45,23 @@ const sound8 = new Howl({
     src: ['../audio/slide7.mp3'],
     loop: true
 });
+// Inject YouTube API script
+var tag = document.createElement('script');
+tag.src = "https://www.youtube.com/player_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+// global variable for the player
+var ytplayer1;
+function onYouTubeIframeAPIReady() {
+    ytplayer1 = new YT.Player('slide6_yt', {
+        events: {
+            'onReady': onPlayerReady,
+        }
+    });
+}
+function onPlayerReady() {
+    ytplayer1.playVideo();
+}
 
 const cat_txt1 = ['Hello My Friend, Welcome To MMH', 'My Name is Tikki!'];
 var user_name = '';
@@ -55,7 +72,7 @@ Howler.volume(0.5);
 
 $(document).ready(
     function () {
-        $('#main_overlay').css('display','unset');
+        $('#main_overlay').css('display', 'unset');
         $("#cat_txt1").typed({
             strings: ["Greetings, my friend", "My Name is Tikki", "May I know your name ?"],
             typeSpeed: 1,
@@ -66,10 +83,9 @@ $(document).ready(
             cursorChar: "|",
             contentType: 'html'
         });
-        var check_tikki = setInterval(function(){
-            if($("#cat_txt1").html() == 'May I know your name ?'){
+        var check_tikki = setInterval(function () {
+            if ($("#cat_txt1").html() == 'May I know your name ?') {
                 clearInterval(check_tikki);
-                $('#slide1 iframe').attr('src','https://www.youtube.com/embed/cHlioeh1WKA?autoplay=1&mute=1&playsinline=1&controls=0');
                 $('#user_name').val('');
                 $('.cat_1 .cat_sprite img').attr('src', "images/cat sprites/Asset3.webp");
                 $('.user_name_div').css('opacity', '1');
@@ -82,7 +98,7 @@ $(document).ready(
                             'bottom': '41%'
                         })
 
-                    }else{
+                    } else {
                         $('.name_error').css({
                             'opacity': '1',
                             'bottom': '-100%'
@@ -99,7 +115,7 @@ $(document).ready(
                         $(".typed-cursor").eq(0).remove();
                         $("#cat_txt1_p2").removeClass('disp_none');
                         $("#cat_txt1_p2").typed({
-                            strings: ["(please adjust your sound level","according to your preference)",`Let's Start ${user_name}!`, "Click on make me happy"],
+                            strings: ["(please adjust your sound level", "according to your preference)", `Let's Start ${user_name}!`, "Click on make me happy"],
                             typeSpeed: 10,
                             startDelay: 0,
                             backSpeed: 1,
@@ -112,13 +128,14 @@ $(document).ready(
                     }
                 })
             }
-        },1000)
+        }, 1000)
     }
 );
 
 $('#btn1').click(
     function () {
-        $('.slides').css('display','unset');
+        ytplayer1.pauseVideo();
+        $('.slides').css('display', 'unset');
         sound1.fade(1, 0, 2000);
         setTimeout(function () {
             sound2.play();
@@ -153,10 +170,10 @@ $('#btn1').click(
             $('.float_box1').fadeIn();
             $('.float_box1').css('display', 'flex');
             $('.heart').click(function () {
-                $('.heart').css('transform','scale(2,2)');
-                setTimeout(function(){
+                $('.heart').css('transform', 'scale(2,2)');
+                setTimeout(function () {
                     $('.heart').fadeOut();
-                },1000)
+                }, 1000)
                 setTimeout(function () {
                     $('.heart_cont').fadeIn();
                 }, 1500)
@@ -211,10 +228,10 @@ $('.forward_btn').click(
                 contentType: 'html'
             });
 
-            setTimeout(function(){
+            setTimeout(function () {
                 $('.forward_btn').show();
                 $('.forward_btn').addClass('blue_bg');
-            },5000)
+            }, 5000)
 
             setTimeout(function () {
                 $('.cat_3').css('transition', '1s')
@@ -248,10 +265,10 @@ $('.forward_btn').click(
             }, 5000);
 
             $('.door').click(function () {
-                $('.door').css('transform','scale(2,2)');
-                setTimeout(function(){
+                $('.door').css('transform', 'scale(2,2) rotateZ(360deg)');
+                setTimeout(function () {
                     $('.door').fadeOut();
-                },1000)
+                }, 1000)
                 setTimeout(function () {
                     $('.door_cont').fadeIn();
                 }, 1500)
@@ -306,10 +323,10 @@ $('.forward_btn').click(
                     contentType: 'html'
                 });
             }, 4000);
-            setTimeout(function(){
+            setTimeout(function () {
                 $('.forward_btn').removeClass('blue_bg');
                 $('.forward_btn').show();
-            },5000)
+            }, 5000)
 
             setTimeout(function () {
                 $('#slide4 .welcome_div').hide();
@@ -320,7 +337,6 @@ $('.forward_btn').click(
         }
 
         else if ($('#slide5').hasClass('carousel-item-next')) {
-            $('#slide6 iframe').attr('src','https://www.youtube.com/embed/RzVvThhjAKw?autoplay=1&mute=1&playsinline=1&controls=0');
             sound5.fade(1, 0, 2000);
             setTimeout(function () {
                 sound6.play();
@@ -337,10 +353,10 @@ $('.forward_btn').click(
                 cursorChar: "|",
                 contentType: 'html'
             });
-            setTimeout(function(){
+            setTimeout(function () {
                 $('.forward_btn').addClass('blue_bg');
                 $('.forward_btn').show();
-            },5000)
+            }, 5000)
             setTimeout(function () {
                 $('.lantern_user textarea').val('');
                 $('.lantern_user').css('opacity', '1');
@@ -416,6 +432,7 @@ $('.forward_btn').click(
         }
 
         else if ($('#slide6').hasClass('carousel-item-next')) {
+            ytplayer1.playVideo();
             sound6.fade(1, 0, 2000);
             setTimeout(function () {
                 sound7.play();
@@ -440,11 +457,11 @@ $('.forward_btn').click(
                     contentType: 'html'
                 });
             }, 4000);
-            setTimeout(function(){
+            setTimeout(function () {
                 $('.forward_btn').removeClass('blue_bg');
                 $('.forward_btn').addClass('green_bg');
                 $('.forward_btn').show();
-            },5000)
+            }, 5000)
 
             setTimeout(function () {
                 $('#slide6 .welcome_div').hide();
@@ -455,8 +472,8 @@ $('.forward_btn').click(
 
         else if ($('#slide7').hasClass('carousel-item-next')) {
             sound7.fade(1, 0, 2000);
-            $('.game_pc iframe').eq(0).attr('src',games_pc[0]);
-            $('.game_mob iframe').eq(0).attr('src',games_mob[0]);
+            $('.game_pc iframe').eq(0).attr('src', games_pc[0]);
+            $('.game_mob iframe').eq(0).attr('src', games_mob[0]);
             setTimeout(function () {
                 sound8.play();
             }, 1500)
@@ -496,8 +513,8 @@ $('.forward_btn').click(
             $('#slide6 iframe').remove();
             sound8.fade(1, 0, 2000);
             $('.game_wrapper').eq(0).remove();
-            $('.game_pc iframe').eq(0).attr('src',games_pc[1]);
-            $('.game_mob iframe').eq(0).attr('src',games_mob[1]);
+            $('.game_pc iframe').eq(0).attr('src', games_pc[1]);
+            $('.game_mob iframe').eq(0).attr('src', games_mob[1]);
             $('.cat_9').fadeIn();
             $("#cat_txt9").typed({
                 strings: ["this game is one of my favourites", "i hope you will like it too"],
@@ -510,9 +527,9 @@ $('.forward_btn').click(
                 contentType: 'html'
             });
 
-            setTimeout(function(){
+            setTimeout(function () {
                 $('.forward_btn').show();
-            },5000)
+            }, 5000)
 
             setTimeout(function () {
                 $('.cat_9').css('transition', '1s')
@@ -522,8 +539,8 @@ $('.forward_btn').click(
 
         else if ($('#slide9').hasClass('carousel-item-next')) {
             $('.game_wrapper').eq(0).remove();
-            $('.game_pc iframe').eq(0).attr('src',games_pc[2]);
-            $('.game_mob iframe').eq(0).attr('src',games_mob[2]);
+            $('.game_pc iframe').eq(0).attr('src', games_pc[2]);
+            $('.game_mob iframe').eq(0).attr('src', games_mob[2]);
             $('.cat_10').fadeIn();
             $("#cat_txt10").typed({
                 strings: ["i hope you are enjoying", "my selection of games", "if not i'm really sorry", "suggest me some good games", "and i'll try to add them"],
@@ -535,12 +552,10 @@ $('.forward_btn').click(
                 cursorChar: "|",
                 contentType: 'html'
             });
-            setTimeout(function(){
+            setTimeout(function () {
                 $('.forward_btn').show();
-                $('.forward_btn').click(function(){
-                    start_slide10_bg();
-                })
-            },4000)
+                
+            }, 4000)
 
             setTimeout(function () {
                 $('.cat_10').css('transition', '1s')
@@ -581,8 +596,8 @@ $('.forward_btn').click(
 
             setTimeout(function () {
                 $('#slide10_bg').remove();
-                $('#slide10').css('overflow-x','hidden');
-                $('#slide10').css('overflow-y','auto');
+                $('#slide10').css('overflow-x', 'hidden');
+                $('#slide10').css('overflow-y', 'auto');
                 $('.review_form').removeClass('d-none');
                 $('#slide10 .end_div').remove();
                 $('.logo_slide').fadeIn();

@@ -177,26 +177,6 @@ main {
     margin: 0px 50px;
 }
 
-.main_overlay_nav ul li:first-child {
-    padding: 10px 20px;
-    border-top: 2px solid #9e801a;
-    border-bottom: 2px solid #9e801a;
-}
-
-.main_overlay_nav ul li:first-child:hover {
-    color: #9e801a;
-}
-
-.main_overlay_nav ul li:last-child {
-    padding: 10px 20px;
-    border-top: 2px solid #9e801a;
-    border-bottom: 2px solid #9e801a;
-}
-
-.main_overlay_nav ul li:last-child:hover {
-    color: #9e801a;
-}
-
 .main_overlay_middle {
 
     margin-top: 15vh;
@@ -625,7 +605,6 @@ main {
 
 #slide10 {
     background-color: #d2d2d2;
-    ;
 }
 
 

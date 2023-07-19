@@ -25,19 +25,7 @@
 
     .main_overlay_nav ul li {
         font-size: 18px;
-        margin: 0px;
-    }
-
-    .main_overlay_nav ul li:first-child {
-        padding: 10px 15px;
-    }
-
-    .main_overlay_nav ul li:nth-child(2) {
         margin: 0px 20px;
-    }
-
-    .main_overlay_nav ul li:last-child {
-        padding: 10px 0px;
     }
 
     .main_overlay_middle {
