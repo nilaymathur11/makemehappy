@@ -90,6 +90,7 @@ $(document).ready(
                     }
                     if ((e.key == 'Enter') && (e.target.value != '')) {
                         sound1.play();
+                        $('#slide1 iframe').attr('src','https://www.youtube.com/embed/cHlioeh1WKA?start=12&autoplay=1&mute=1&playsinline=1&controls=0');
                         $('.name_error').css('display', 'none');
                         user_name = $('#user_name').val();
                         $('.user_name_div').fadeOut();
@@ -191,6 +192,7 @@ $('.forward_btn').click(
         $('.forward_btn').fadeOut();
 
         if ($('#slide2').hasClass('carousel-item-next')) {
+            $('#slide1 iframe').remove();
             sound2.fade(1, 0, 2000);
             setTimeout(function () {
                 sound3.play();
@@ -413,6 +415,7 @@ $('.forward_btn').click(
         }
 
         else if ($('#slide6').hasClass('carousel-item-next')) {
+            $('#slide6 iframe').attr('src','https://www.youtube.com/embed/RzVvThhjAKw?start=12&autoplay=1&mute=1&playsinline=1&controls=0');
             sound6.fade(1, 0, 2000);
             setTimeout(function () {
                 sound7.play();

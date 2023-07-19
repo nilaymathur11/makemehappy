@@ -12,7 +12,7 @@ ul {
     list-style: none;
 }
 
-button{
+button {
     color: black;
 }
 
@@ -100,7 +100,7 @@ main {
     height: 70px;
 }
 
-.name_error{
+.name_error {
     background-color: white;
     text-align: center;
     font-size: 14px;
@@ -129,7 +129,7 @@ main {
     animation: cat_move1 1s forwards;
 }
 
-.cat_1 .cat_txt{
+.cat_1 .cat_txt {
     min-width: unset;
     width: 350px;
 }
@@ -373,7 +373,8 @@ main {
     margin-right: 10px;
 }
 
-.welcome_div, .end_div {
+.welcome_div,
+.end_div {
     height: 100vh;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.8);
@@ -393,7 +394,7 @@ main {
     z-index: 999;
 }
 
-.user_name_div{
+.user_name_div {
     transition: 1s;
 }
 
@@ -452,7 +453,7 @@ main {
     cursor: pointer;
 }
 
-.door{
+.door {
     transition: 1s;
 }
 
@@ -618,12 +619,13 @@ main {
     display: none;
 }
 
-.embedsocial-collect-iframe iframe{
+.embedsocial-collect-iframe iframe {
     height: 1100px !important;
 }
 
-#slide10{
-    background-color: #d2d2d2;;
+#slide10 {
+    background-color: #d2d2d2;
+    ;
 }
 
 
@@ -939,6 +941,8 @@ main {
     position: absolute;
     z-index: -999;
     overflow: hidden;
+    top: 0%;
+    left: 0%;
 }
 
 /* Slide 2 */
@@ -1011,21 +1015,47 @@ main {
     height: 100vh;
     object-fit: cover;
 }
+.slide_bg_video iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    transform: translate(-50%, -50%);
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .slide_bg_video iframe {
+        /* height = 100 * (9 / 16) = 56.25 */
+        height: 56.25vw;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .slide_bg_video iframe {
+        /* width = 100 / (9 / 16) = 177.777777 */
+        width: 177.78vh;
+    }
+}
 
 .game_slide_bg {
     background-size: cover;
     background-position: center 70%;
 }
-.game_slide_bg1{
+
+.game_slide_bg1 {
     background-image: url(../images/gamebg.jpg);
 }
-.game_slide_bg2{
+
+.game_slide_bg2 {
     background-image: url(../images/gamebg2.jpg);
 }
-.game_slide_bg3{
+
+.game_slide_bg3 {
     background-image: url(../images/gamebg3.jpg);
 }
-.game_slide_bg4{
+
+.game_slide_bg4 {
     background-image: url(../images/gamebg4.jpg);
 }
 
@@ -1184,6 +1214,6 @@ footer {
     color: white;
 }
 
-.disp_none{
+.disp_none {
     display: none;
 }
