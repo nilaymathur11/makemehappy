@@ -439,7 +439,7 @@ main {
     font-weight: bold;
     position: absolute;
     bottom: 15%;
-    left: 44%;
+    left: 44.5%;
 }
 
 .door img {
@@ -616,10 +616,6 @@ main {
 
 .embedsocial-collect-iframe iframe {
     height: 1100px !important;
-}
-
-#slide10 {
-    background-color: #d2d2d2;
 }
 
 

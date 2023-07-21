@@ -52,7 +52,7 @@ const sound8 = new Howl({
     loop: true
 });
 const sound9 = new Howl({
-    src: ['../audio/slide1.mp3'],
+    src: ['../audio/slide10.mp3'],
     loop: true
 });
 
@@ -606,6 +606,7 @@ $('.forward_btn').click(
             }, 25000);
             $('.review_btn').click(()=>{
                 slide10_vid.pause();
+                sound10.fade(1, 0, 2000);
                 $('#slide10_bg').remove();
                 $('.review_btn').remove();
                 $('#slide10').css('overflow-x', 'hidden');
