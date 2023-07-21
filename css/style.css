@@ -440,6 +440,7 @@ main {
     position: absolute;
     bottom: 15%;
     left: 44.5%;
+    z-index: 9999;
 }
 
 .door img {
