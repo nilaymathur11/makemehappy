@@ -333,4 +333,9 @@
     .game_pc {
         display: none;
     }
+    .review_btn{
+        left: 32%;
+        width: 150px;
+        font-size: 20px;
+    }
 }

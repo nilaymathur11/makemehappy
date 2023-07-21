@@ -82,7 +82,10 @@
                     <div class="carousel-item active" id="slide1">
                         <section class="slide_lvl">
                             <div class="slide_bg slide_bg_video">
-                                <iframe src="https://www.youtube.com/embed/cHlioeh1WKA?autoplay=1&mute=1&start=10&playsinline=1&controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                <video id="slide1_vid" muted loop>
+                                    <source src="videos/slide1bg.mp4" type="video/mp4">
+                                    Your browser does not support HTML5 video.
+                                </video>
                             </div>
                             <div class="container">
                                 <div class="welcome_div">
@@ -211,7 +214,10 @@
                     <div class="carousel-item" id="slide6">
                         <section class="slide_lvl">
                             <div class="slide_bg slide_bg_video">
-                                <iframe id="slide6_yt" src="https://www.youtube.com/embed/RzVvThhjAKw?enablejsapi=1&html5=1&mute=1&playsinline=1&controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                <video id="slide6_vid" loop muted>
+                                    <source src="videos/slide6bg.mp4" type="video/mp4">
+                                    Your browser does not support HTML5 video.
+                                </video>
                             </div>
                             <div class="welcome_div">
                                 Now Let's Take A Dive <br> Into Our Beautiful Nature
@@ -365,13 +371,18 @@
                     </div>
                     <div class="carousel-item" id="slide10">
                         <section class="slide_lvl">
-                            <div id="slide10_bg" class="slide_bg"></div>
+                            <div class="slide_bg slide_bg_video" id="slide10_bg">
+                                <video id="slide10_vid" loop muted>
+                                    <source src="videos/slide10bg.mp4" type="video/mp4">
+                                    Your browser does not support HTML5 video.
+                                </video>
+                            </div>
                             <div class="logo_slide logo">
                                 <a href="index.html"><img src="images/logo.png" alt="logo"></a>
                             </div>
                             <audio id="song" src="" class="d-none"></audio>
                             <div class="welcome_div">
-                                Introducing an awe-inspiring! <br> audio visualizer
+                                Thank You For Taking <br> This Journey With Us
                             </div>
                             <div class="cat cat_11 disp_none">
                                 <div class="cat_name">Tikki</div>
@@ -384,10 +395,11 @@
                                 </div>
                             </div>
                             <div class="end_div">
-                                thank you for giving us a chance to make you feel better <br> We kindly request your
+                                This is the last part for now, we hope we were able to make you feel better <br> We kindly request your
                                 valuable feedback<br> to aid us in enhancing our services <br> (go back to homepage by
                                 clicking on logo)
                             </div>
+                            <button class="review_btn d-none">Review Us</button>
                             <div class="review_form d-none">
                                 <div class="embedsocial-collect-iframe" data-ref="607604783fbc373d2faa"> </div>
                                 <script>(function (d, s, id) { var js; if (d.getElementById(id)) { return; } js = d.createElement(s); js.id = id; js.src = "https://embedsocial.com/cdn/csi.js"; d.getElementsByTagName("head")[0].appendChild(js); }(document, "script", "EmbedSocialReviewsCollectIframeScript"));</script>

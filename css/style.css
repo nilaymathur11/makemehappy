@@ -10,6 +10,8 @@ a {
 
 ul {
     list-style: none;
+    margin: 0px;
+    padding: 0px;
 }
 
 button {
@@ -395,6 +397,7 @@ main {
     font-size: 280px;
     color: rgb(222, 64, 64);
     transition: 1s;
+    margin-bottom: 200px;
 }
 
 .heart_cont,
@@ -416,7 +419,8 @@ main {
 .door_cont button,
 .lantern_submit,
 .lantern_opt1,
-.lantern_opt2 {
+.lantern_opt2,
+.review_btn {
     border: 1px solid black;
     border-radius: 10px;
     padding: 10px 15px;
@@ -425,6 +429,17 @@ main {
     background-color: orange;
     margin-top: 30px;
     color: black;
+}
+
+.review_btn {
+    width: 200px;
+    height: 60px;
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    bottom: 15%;
+    left: 44%;
 }
 
 .door img {
@@ -993,28 +1008,6 @@ main {
     width: 100%;
     height: 100vh;
     object-fit: cover;
-}
-.slide_bg_video iframe {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100vw;
-    height: 100vh;
-    transform: translate(-50%, -50%);
-}
-
-@media (min-aspect-ratio: 16/9) {
-    .slide_bg_video iframe {
-        /* height = 100 * (9 / 16) = 56.25 */
-        height: 56.25vw;
-    }
-}
-
-@media (max-aspect-ratio: 16/9) {
-    .slide_bg_video iframe {
-        /* width = 100 / (9 / 16) = 177.777777 */
-        width: 177.78vh;
-    }
 }
 
 .game_slide_bg {

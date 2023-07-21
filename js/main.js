@@ -1,12 +1,18 @@
 
 // Index Page Script
-
 var vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 window.addEventListener('resize', () => {
     var vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
 });
+
+var slide1_vid = document.querySelector('#slide1_vid');
+slide1_vid.preload = "auto";
+var slide6_vid = document.querySelector('#slide6_vid');
+slide6_vid.preload = "auto";
+var slide10_vid = document.querySelector('#slide10_vid');
+slide10_vid.preload = "auto";
 
 const games_pc = ['https://www.miniplay.com/embed/super-mario-bros', 'https://www.miniplay.com/embed/super-bomberman', 'https://www.miniplay.com/embed/space-adventure-pinball'];
 const games_mob = ['https://www.miniplay.com/game/super-mario-bros/play', 'https://www.miniplay.com/game/super-bomberman/play', 'https://www.miniplay.com/embed/space-adventure-pinball'];
@@ -45,23 +51,10 @@ const sound8 = new Howl({
     src: ['../audio/slide7.mp3'],
     loop: true
 });
-// Inject YouTube API script
-var tag = document.createElement('script');
-tag.src = "https://www.youtube.com/player_api";
-var firstScriptTag = document.getElementsByTagName('script')[0];
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-// global variable for the player
-var ytplayer1;
-function onYouTubeIframeAPIReady() {
-    ytplayer1 = new YT.Player('slide6_yt', {
-        events: {
-            'onReady': onPlayerReady,
-        }
-    });
-}
-function onPlayerReady() {
-    ytplayer1.playVideo();
-}
+const sound9 = new Howl({
+    src: ['../audio/slide1.mp3'],
+    loop: true
+});
 
 const cat_txt1 = ['Hello My Friend, Welcome To MMH', 'My Name is Tikki!'];
 var user_name = '';
@@ -70,6 +63,16 @@ $('.forward_btn').fadeOut();
 $('.logo_slide').fadeOut();
 Howler.volume(0.5);
 
+function hideKeyboard(element) {
+    element.attr('readonly', 'readonly'); // Force keyboard to hide on input field.
+    element.attr('disabled', 'true'); // Force keyboard to hide on textarea field.
+    setTimeout(function() {
+        element.blur();  //actually close the keyboard
+        // Remove readonly attribute after keyboard is hidden.
+        element.removeAttr('readonly');
+        element.removeAttr('disabled');
+    }, 100);
+}
 $(document).ready(
     function () {
         $('#main_overlay').css('display', 'unset');
@@ -89,7 +92,7 @@ $(document).ready(
                 $('#user_name').val('');
                 $('.cat_1 .cat_sprite img').attr('src', "images/cat sprites/Asset3.webp");
                 $('.user_name_div').css('opacity', '1');
-                $('#user_name').select();
+                $('#user_name').trigger("select");
                 $('#user_name').keyup(function (e) {
                     if ($('#user_name').val().length >= 10) {
                         $('#user_name').val(user_name);
@@ -110,6 +113,7 @@ $(document).ready(
                         $('.name_error').css('display', 'none');
                         user_name = $('#user_name').val();
                         $('.user_name_div').fadeOut();
+                        hideKeyboard($('#user_name'));
                         $('#user_name').addClass('disp_none');
                         $("#cat_txt1").remove();
                         $(".typed-cursor").eq(0).remove();
@@ -134,7 +138,7 @@ $(document).ready(
 
 $('#btn1').click(
     function () {
-        ytplayer1.pauseVideo();
+        slide1_vid.play();
         $('.slides').css('display', 'unset');
         sound1.fade(1, 0, 2000);
         setTimeout(function () {
@@ -432,7 +436,7 @@ $('.forward_btn').click(
         }
 
         else if ($('#slide6').hasClass('carousel-item-next')) {
-            ytplayer1.playVideo();
+            slide6_vid.play();
             sound6.fade(1, 0, 2000);
             setTimeout(function () {
                 sound7.play();
@@ -564,6 +568,8 @@ $('.forward_btn').click(
         }
 
         else {
+            sound9.play();
+            slide10_vid.play();
             $('.game_wrapper').eq(0).remove();
             $('.forward_btn').fadeOut();
             setTimeout(function () {
@@ -588,20 +594,25 @@ $('.forward_btn').click(
                 $('#slide10 .welcome_div').css('display', 'none');
                 $('.cat_11').css('transition', '1s')
                 $('.cat_11').css('opacity', '0');
-            }, 16000);
-
-            setTimeout(function () {
                 $('#slide10 .end_div').css('opacity', '1');
-            }, 90000)
-
+                $('.logo_slide').fadeIn();
+            }, 16000);
             setTimeout(function () {
+                $('#slide10 .end_div').css('opacity', '0');
+                $('.review_btn').removeClass('d-none');
+            }, 24000);
+            setTimeout(function () {
+                $('#slide10 .end_div').css('display', 'none');
+            }, 25000);
+            $('.review_btn').click(()=>{
+                slide10_vid.pause();
                 $('#slide10_bg').remove();
+                $('.review_btn').remove();
                 $('#slide10').css('overflow-x', 'hidden');
                 $('#slide10').css('overflow-y', 'auto');
                 $('.review_form').removeClass('d-none');
                 $('#slide10 .end_div').remove();
-                $('.logo_slide').fadeIn();
-            }, 100000)
+            })
         }
     }
 );
