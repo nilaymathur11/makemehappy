@@ -432,15 +432,16 @@ main {
 }
 
 .review_btn {
-    width: 200px;
     height: 60px;
     font-size: 25px;
+    padding: 12px 20px;
     color: white;
     font-weight: bold;
     position: absolute;
     bottom: 15%;
     left: 44.5%;
     z-index: 9999;
+    background-image: linear-gradient(90deg, #272727, #273f21);
 }
 
 .door img {

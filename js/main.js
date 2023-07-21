@@ -15,7 +15,7 @@ var slide10_vid = document.querySelector('#slide10_vid');
 slide10_vid.preload = "auto";
 
 const games_pc = ['https://www.miniplay.com/embed/super-mario-bros', 'https://www.miniplay.com/embed/super-bomberman', 'https://www.miniplay.com/embed/space-adventure-pinball'];
-const games_mob = ['https://www.miniplay.com/game/super-mario-bros/play', 'https://www.miniplay.com/game/super-bomberman/play', 'https://www.miniplay.com/embed/space-adventure-pinball'];
+const games_mob = ['https://www.miniplay.com/game/super-mario-bros/play', 'https://www.miniplay.com/game/super-bomberman/play', 'https://www.miniplay.com/game/space-adventure-pinball/play'];
 
 var winWidth = window.innerWidth;
 
@@ -606,7 +606,7 @@ $('.forward_btn').click(
             }, 25000);
             $('.review_btn').click(()=>{
                 slide10_vid.pause();
-                sound10.fade(1, 0, 2000);
+                sound9.fade(1, 0, 2000);
                 $('#slide10_bg').remove();
                 $('.review_btn').remove();
                 $('#slide10').css('overflow-x', 'hidden');

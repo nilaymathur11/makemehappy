@@ -299,6 +299,11 @@
         padding-top: 100px;
     }
 
+    .slide2_bg{
+        align-items: unset;
+        padding-top: 65%;
+    }
+
     .float_box,.welcome_div, .end_div{
         align-items: flex-start;
         padding-top: 150px;
@@ -334,8 +339,7 @@
         display: none;
     }
     .review_btn{
-        left: 32%;
-        width: 150px;
+        left: 37%;
         font-size: 20px;
     }
 }
