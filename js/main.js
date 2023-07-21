@@ -599,10 +599,10 @@ $('.forward_btn').click(
             }, 16000);
             setTimeout(function () {
                 $('#slide10 .end_div').css('opacity', '0');
-                $('.review_btn').removeClass('d-none');
             }, 24000);
             setTimeout(function () {
                 $('#slide10 .end_div').css('display', 'none');
+                $('.review_btn').removeClass('d-none');
             }, 25000);
             $('.review_btn').click(()=>{
                 slide10_vid.pause();
