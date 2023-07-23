@@ -2,10 +2,6 @@
 // Index Page Script
 var vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', `${vh}px`);
-window.addEventListener('resize', () => {
-    var vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
-});
 
 var slide1_vid = document.querySelector('#slide1_vid');
 slide1_vid.preload = "auto";
@@ -66,7 +62,7 @@ Howler.volume(0.5);
 function hideKeyboard(element) {
     element.attr('readonly', 'readonly'); // Force keyboard to hide on input field.
     element.attr('disabled', 'true'); // Force keyboard to hide on textarea field.
-    setTimeout(function() {
+    setTimeout(function () {
         element.blur();  //actually close the keyboard
         // Remove readonly attribute after keyboard is hidden.
         element.removeAttr('readonly');
@@ -143,6 +139,7 @@ $('#btn1').click(
         sound1.fade(1, 0, 2000);
         setTimeout(function () {
             sound2.play();
+            $('#main_overlay').remove();
         }, 1500)
         $('#main_overlay').css('animation', 'main_overlay 1s 0s 1 ease-in forwards');
 
@@ -558,7 +555,7 @@ $('.forward_btn').click(
             });
             setTimeout(function () {
                 $('.forward_btn').show();
-                
+
             }, 4000)
 
             setTimeout(function () {
@@ -604,7 +601,7 @@ $('.forward_btn').click(
                 $('#slide10 .end_div').css('display', 'none');
                 $('.review_btn').removeClass('d-none');
             }, 25000);
-            $('.review_btn').click(()=>{
+            $('.review_btn').click(() => {
                 slide10_vid.pause();
                 sound9.fade(1, 0, 2000);
                 $('#slide10_bg').remove();
