@@ -7,16 +7,26 @@ window.addEventListener('resize', () => {
     document.documentElement.style.setProperty('--vh', `${vh}px`);
 });
 let videoCollection = ['slide1bg', 'vid1', 'vid2', 'vid3', 'vid4','slide6bg'];
-let vidNum = Math.floor((Math.random()) * 10);
-if (vidNum >= videoCollection.length) {
-    while (vidNum >= videoCollection.length) {
-        vidNum = Math.floor((Math.random()) * 10);
+let vidNum = 0;
+function genRandomNum(){
+    vidNum = Math.floor((Math.random()) * 10);
+    if (vidNum >= videoCollection.length) {
+        while (vidNum >= videoCollection.length) {
+            vidNum = Math.floor((Math.random()) * 10);
+        }
     }
 }
 
+genRandomNum();
 var slide1_vid = document.querySelector('#slide1_vid');
 slide1_vid.src = `videos/${videoCollection[vidNum]}.mp4`;
+slide1_vid.preload = "auto";
+
+genRandomNum();
 var slide6_vid = document.querySelector('#slide6_vid');
+slide6_vid.src = `videos/${videoCollection[vidNum]}.mp4`;
+slide6_vid.preload = "auto";
+
 var slide10_vid = document.querySelector('#slide10_vid');
 slide10_vid.preload = "auto";
 
@@ -365,13 +375,6 @@ $('.forward_btn').click(
                 contentType: 'html'
             });
             setTimeout(function () {
-                vidNum = Math.floor((Math.random()) * 10);
-                if (vidNum >= videoCollection.length) {
-                    while (vidNum >= videoCollection.length) {
-                        vidNum = Math.floor((Math.random()) * 10);
-                    }
-                }
-                slide6_vid.src = `videos/${videoCollection[vidNum]}.mp4`;
                 $('.forward_btn').addClass('blue_bg');
                 $('.forward_btn').show();
             }, 4000)
