@@ -6,7 +6,7 @@ window.addEventListener('resize', () => {
     vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
 });
-let videoCollection = ['slide1bg', 'vid1', 'vid2', 'vid3', 'vid4'];
+let videoCollection = ['slide1bg', 'vid1', 'vid2', 'vid3', 'vid4','slide6bg'];
 let vidNum = Math.floor((Math.random()) * 10);
 if (vidNum >= videoCollection.length) {
     while (vidNum >= videoCollection.length) {
